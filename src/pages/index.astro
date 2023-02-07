@@ -1,0 +1,33 @@
+---
+import Layout from "../components/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Inicio from "../components/Inicio.astro";
+import Estudios from "../components/Estudios.astro";
+import Habilidades from "../components/Habilidades.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Contacto from "../components/Contacto.astro";
+---
+<Layout>
+	<Navbar/>
+	<div class="content">
+		<Inicio/>
+		<Estudios/>
+		<Habilidades/>
+		<Proyectos/>
+		<Contacto/>
+	</div>
+	<Footer/>
+</Layout>
+
+<style>
+	.content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	
+</style>

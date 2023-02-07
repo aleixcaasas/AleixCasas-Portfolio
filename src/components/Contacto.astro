@@ -1,0 +1,102 @@
+<section id="contacto" class="seccio">
+    <a href="#contacto"><h2 class="title">CONTACTO</h2></a>
+    <form class="contact_form" action="https://formsubmit.co/acasasbarco@gmail.com" method="POST">
+        <div class="parameter">
+            <label class="label" for="name">Nombre</label>
+            <input class="input-text" name="Nom" type="text" required>
+        </div>
+        <div class="parameter">
+            <label class="label" for="email">Correo Electrónico</label>
+            <input class="input-text" name="Correu" type="email" required>
+        </div>
+        <div class="parameter">
+            <label class="label" for="message">Mensaje</label>
+            <textarea class="input-text" cols="50" id="message" name="Missatge" required="<%= true %>" rows="4"></textarea>
+        </div>
+        <div class="form-field col x-100 align-center">
+            <input class="submit-btn" type="submit" value="Enviar">
+        </div>
+        <input type="hidden" name="_next" value="http://localhost:3000">
+        <input type="hidden" name="_captcha" value="false">
+    </form>
+
+</section>
+
+
+<style>
+
+    .seccio{
+        width: 75%;
+        margin-block: 50px;
+        margin-inline: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .title{
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        padding-left: 10px;
+        margin-block: 30px;
+        font-weight: bold;
+        padding-bottom: 7px;
+        border-bottom: 2px solid #FF2424;
+    }
+    
+    .contact_form{
+        width: 55%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parameter{
+        margin-block: 10px;
+        width: 100%;
+    }
+
+    .input-text {
+        display: block;
+        width: 100%;
+        height: 36px;
+        border-width: 0 0 2px 0;
+        border-color: #000;
+        font-size: 16px;
+        color: #000000;
+        line-height: 26px;
+        font-weight: 350;
+        padding: 0 10px;
+        margin-block: 2px;
+        outline: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #message{
+        height: 110px;
+    }
+
+    .submit-btn {
+        background-color: #000;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 16px;
+        padding: 12px 30px;
+        margin-top: 15px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .submit-btn:hover{
+      background-color: #686767;
+    }
+
+</style>

@@ -1,0 +1,102 @@
+<header>
+    <nav>
+        <div class="icon_logo">
+            <a href="/"> <img class="personal_logo" src="../../img/horizontal_logo.png" alt="" height="70px"> </a>
+        </div>
+        <div class="container_categories">
+            <ul class="llista_categories">
+                <a class="cat" href="#inicio"><li>INICIO</li></a>
+                <a class="cat" href="#estudios"><li>ESTUDIOS</li></a>
+                <a class="cat" href="#habilidades"><li>HABILIDADES</li></a>
+                <a class="cat" href="#proyectos"><li>PROYECTOS</li></a>
+                <a class="cat" href="#contacto"><li>CONTACTO</li></a>
+            </ul>
+        </div>
+        <div class="download_cv">
+            <button type="submit" onclick="window.open('../../public/CV_Aleix_Casas.pdf')">Descargar CV</button>
+        </div>
+    </nav>
+</header>
+
+
+<style>
+
+    header {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        background-color: white;
+    }
+
+    nav{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: 1px solid #434a5be1;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    .personal_logo:hover{
+        cursor:pointer
+    }
+
+    .icon_logo{
+        padding-block: 10px;
+    }
+
+    .llista_categories li{
+        display: inline;
+        font-weight: bold;
+        margin-inline: 24px;
+        padding-block: 5px;
+        padding-inline: 6px;
+    }
+
+    .llista_categories li:hover{
+        color: #FF2424;
+        cursor: pointer;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #FF2424;
+    }
+
+    .container_categories{
+        display: flex;
+        align-items: center;
+        margin-inline: 140px;
+    }
+
+    .download_cv{
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        font-family:  'Quicksand', sans-serif;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 10px 25px;
+    }
+
+    button:hover{
+        border: 2px solid #FF2424;
+        color: #FF2424;
+        margin-bottom: 3px;
+        transition: cubic-bezier();
+    }
+
+    .icon_logo .download_cv{
+        width: 200px;
+        margin-inline: 45px;
+    }
+
+
+</style>
