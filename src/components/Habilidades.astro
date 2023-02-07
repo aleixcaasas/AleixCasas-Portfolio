@@ -1,51 +1,51 @@
 <section id="habilidades">
 
-    <a href="#habilidades"><h2 class="title">Habilidades</h2></a>
+    <a href="#habilidades"><h2 data-animation="center" class="title">Habilidades</h2></a>
 
     <div class="container_habilidades">
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-html5.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/html-5.png" alt="" height="100px">
             <span>HTML</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-css3.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/css-3.png" alt="" height="100px">
             <span>CSS</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-javascript.png" alt="" height="100px">
+            <img id="js" src="../../img/coloured_tecnologies/javascript.png" alt="" height="100px">
             <span>JavaScript</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-bootstrap.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/bootstrap.svg" alt="" height="100px">
             <span>Bootstrap</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-tailwind-css.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/tailwind-css.png" alt="" height="100px">
             <span>Tailwind CSS</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-c-plus-plus.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/c++.png" alt="" height="100px">
             <span>C++</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-java.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/java.png" alt="" height="100px">
             <span>Java</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-python.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/python.png" alt="" height="100px">
             <span>Python</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-postgresql.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/postgreSQL.png" alt="" height="100px">
             <span>SQL</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-mongodb.png" alt="" height="100px">
+            <img src="../../img/coloured_tecnologies/mongodb.png" alt="" height="100px">
             <span>MongoDB</span>
         </div>
         <div class="habilidad">
-            <img src="../../public/img/tecnologies/bxl-github.png" alt="" height="100px">
-            <span>GitHub</span>
+            <img src="../../img/coloured_tecnologies/git.png" alt="" height="100px">
+            <span>Git</span>
         </div>
     </div>
 </section>
@@ -73,12 +73,13 @@
         margin-block: 30px;
         font-weight: bold;
         padding-bottom: 7px;
-        border-bottom: 2px solid #FF2424;
     }
 
     .container_habilidades{
         display: grid;
-        grid-template-columns: repeat(3,100px);
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 30px;
+        grid-gap: 20px;
         align-items: center;
         justify-content: center;
         column-gap: 125px;
@@ -89,7 +90,75 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        grid-column: span 2;
+    }
+
+    .habilidad:last-child:nth-child(3n - 1) {
+        grid-column-end: -2;
+    }
+
+    .habilidad:nth-last-child(2):nth-child(3n + 1) {
+        grid-column-end: 4;
+    }
+
+    #js{
+        border-radius: 8px;
+    }
+
+            /* ANIMATIONS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .menu[data-animation="center"] a::before {
+        transform-origin: center;
+    }
+
+    .llista_categories li {
+        position: relative;
+        display: flex;
+        padding: 5px;
+    }
+
+    h2 {
+        position: relative;
+        display: block;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    h2::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #FF2424;
+        border-radius: 8px;
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    h2:hover::before {
+        transform: scaleX(1);
     }
 
 
+    .habilidad img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    .habilidad:hover img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        font-weight: bold;
+    }
+
+    .habilidad span{
+        margin-top: 10px;
+    }
+    
 </style>

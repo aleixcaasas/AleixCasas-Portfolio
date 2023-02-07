@@ -4,12 +4,12 @@
             <a href="/"> <img class="personal_logo" src="../../img/horizontal_logo.png" alt="" height="70px"> </a>
         </div>
         <div class="container_categories">
-            <ul class="llista_categories">
-                <a class="cat" href="#inicio"><li>INICIO</li></a>
-                <a class="cat" href="#estudios"><li>ESTUDIOS</li></a>
-                <a class="cat" href="#habilidades"><li>HABILIDADES</li></a>
-                <a class="cat" href="#proyectos"><li>PROYECTOS</li></a>
-                <a class="cat" href="#contacto"><li>CONTACTO</li></a>
+            <ul class="menu" data-animation="center">
+                <a class="cat"  href="#inicio"><li>INICIO</li></a>
+                <a class="cat" data-animation="center" href="#estudios"><li>ESTUDIOS</li></a>
+                <a class="cat" data-animation="center" href="#habilidades"><li>HABILIDADES</li></a>
+                <a class="cat" data-animation="center" href="#proyectos"><li>PROYECTOS</li></a>
+                <a class="cat" data-animation="center" href="#contacto"><li>CONTACTO</li></a>
             </ul>
         </div>
         <div class="download_cv">
@@ -23,8 +23,7 @@
 
     header {
         width: 100%;
-        position: fixed;
-        z-index: 100;
+
         background-color: white;
     }
 
@@ -34,6 +33,12 @@
         flex-direction: row;
         justify-content: center;
         border-bottom: 1px solid #434a5be1;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        column-gap: 75px;
     }
 
     a{
@@ -50,6 +55,7 @@
     }
 
     .llista_categories li{
+        position: relative;
         display: inline;
         font-weight: bold;
         margin-inline: 24px;
@@ -57,12 +63,6 @@
         padding-inline: 6px;
     }
 
-    .llista_categories li:hover{
-        color: #FF2424;
-        cursor: pointer;
-        padding-bottom: 3px;
-        border-bottom: 2px solid #FF2424;
-    }
 
     .container_categories{
         display: flex;
@@ -98,5 +98,43 @@
         margin-inline: 45px;
     }
 
+
+    /* ANIMATIONS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .menu[data-animation="center"] a::before {
+        transform-origin: center;
+    }
+
+    .llista_categories li {
+        position: relative;
+        display: flex;
+        padding: 5px;
+    }
+
+    .menu a {
+        position: relative;
+        display: block;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .menu a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.5px;
+        border-radius: 8px;
+        background: #FF2424;
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu a:hover::before {
+        transform: scaleX(1);
+    }
 
 </style>
