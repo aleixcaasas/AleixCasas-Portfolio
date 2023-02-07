@@ -1,13 +1,65 @@
 <section id="habilidades">
 
     <a href="#habilidades"><h2 class="title">Habilidades</h2></a>
+
+    <div class="container_habilidades">
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-html5.png" alt="" height="100px">
+            <span>HTML</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-css3.png" alt="" height="100px">
+            <span>CSS</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-javascript.png" alt="" height="100px">
+            <span>JavaScript</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-bootstrap.png" alt="" height="100px">
+            <span>Bootstrap</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-tailwind-css.png" alt="" height="100px">
+            <span>Tailwind CSS</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-c-plus-plus.png" alt="" height="100px">
+            <span>C++</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-java.png" alt="" height="100px">
+            <span>Java</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-python.png" alt="" height="100px">
+            <span>Python</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-postgresql.png" alt="" height="100px">
+            <span>SQL</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-mongodb.png" alt="" height="100px">
+            <span>MongoDB</span>
+        </div>
+        <div class="habilidad">
+            <img src="../../public/img/tecnologies/bxl-github.png" alt="" height="100px">
+            <span>GitHub</span>
+        </div>
+    </div>
 </section>
 
 <style>
 
     section{
+        width: 75%;
         margin-block: 50px;
-    }
+        margin-inline: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    }
 
     a{
         text-decoration: none;
@@ -22,6 +74,21 @@
         font-weight: bold;
         padding-bottom: 7px;
         border-bottom: 2px solid #FF2424;
+    }
+
+    .container_habilidades{
+        display: grid;
+        grid-template-columns: repeat(3,100px);
+        align-items: center;
+        justify-content: center;
+        column-gap: 125px;
+        row-gap: 45px;
+    }
+
+    .habilidad{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
