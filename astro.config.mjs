@@ -7,5 +7,4 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://aleixcaasas.github.io',
   base: '/AleixCasas-Portfolio',
-  integrations: [tailwind()]
 });
