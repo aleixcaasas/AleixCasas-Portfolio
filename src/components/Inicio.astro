@@ -2,7 +2,9 @@
     <div class="container_inicio">
         <div class="container_text">
             <span>Hola, soy</span>
-            <h1>Aleix Casas</h1>
+            <div class="typewriter">
+                <h1>Aleix Casas</h1>
+            </div>
             <h4>Estudiante de Ingeniería Informática apasionado por la tecnología y la programación.</h4>
             <p>Siempre estoy aprendiendo nuevas tecnologías y buscando nuevas formas de mejorar mis proyectos.</p>
             <div class="container_contactame">
@@ -34,7 +36,7 @@
         align-items: center;
         justify-content: center;
 
-        background-color: #fff;
+        background-color: rgba(219, 234, 254, 0.645);
         border-radius: 20px;
         position: relative;
         padding: 40px;
@@ -52,6 +54,18 @@
     }
 
 
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+        
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+
 
     h1{
         font-family: 'Black Ops One', cursive;        
@@ -65,11 +79,15 @@
         margin-block: 10px;
         padding: 0;
         margin: 0;
+
+        width: 11ch;
+        animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+        white-space: nowrap;
     }
 
     .container_text{
         margin-right: 60px;
-        max-width: 550px;
+        max-width: 600px;
     }
 
     h4{
