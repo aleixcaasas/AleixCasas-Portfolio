@@ -1,0 +1,53 @@
+footer{
+    background-color: #434a5be1;
+    color: white;
+}
+
+.foot{
+    position: sticky;
+    bottom: 10px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+
+.social{
+    margin-top: 40px;
+}
+
+.apps{
+    padding-inline: 30px;
+}
+
+.apps li{
+    display: inline;
+    font-weight: bold;
+    padding-inline: 20px;
+}
+
+.app:hover{
+    cursor: pointer;
+    filter: opacity(.5) drop-shadow(0 0 0 white) brightness(.5); 
+}
+
+.derechos{
+    font-size: 16px;
+    margin-block: 25px;
+}
