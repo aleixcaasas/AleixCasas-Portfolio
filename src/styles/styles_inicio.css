@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+#inicio {
+    margin-bottom: 50px;
+}
+
+.container_inicio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(219, 234, 254, 0.645);
+    border-radius: 20px;
+    position: relative;
+    margin-top: 30px;
+    padding: 40px;
+    color: #444;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+
+
+}
+
+.container_inicio:hover{
+    transform: scale(1.12);
+    transition: 0.5s ease-in-out;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+    
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+h1{
+    font-family: 'Black Ops One', cursive;        
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    background-image: linear-gradient(to right, #FF2424, #434a5be1);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-block: 10px;
+    padding: 0;
+    margin: 0;
+
+    width: 11ch;
+    animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+}
+
+.container_text{
+    margin-right: 60px;
+    max-width: 600px;
+}
+
+h4{
+    font-family: 'Black Ops One', cursive;        
+    max-width: 60ch;
+    font-size: large;
+    margin: 0 0 15px 0;
+}
+
+.container_text span{
+    font-family: 'Black Ops One', cursive;        
+    color: #5a5858;
+}
+
+p{
+    max-width: 60ch;
+    text-align: justify;
+}
+
+.personal_photo img{
+    border-radius: 40px;
+}
+
+.container_contactame{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    font-family:  'Quicksand', sans-serif;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin: 3px 20px 0 0;
+}
+
+button:hover{
+    border: 2px solid #FF2424;
+    color: #FF2424;
+    margin-top: 0;
+    margin-bottom: 3px;
+    transition: cubic-bezier();
+}
+
+.container_contactame a{
+    margin-right: 10px;
+}
+
+.container_contactame a:hover{
+    cursor: pointer;
+    filter: opacity(.5) drop-shadow(0 0 0 white) brightness(.5); 
+}
