@@ -1,13 +1,136 @@
 <section id="inicio">
+    <div class="container_inicio">
+        <div class="container_text">
+            <span>Hola, soy</span>
+            <h1>Aleix Casas</h1>
+            <h4>Estudiante de Ingeniería Informática apasionado por la tecnología y la programación.</h4>
+            <p>Siempre estoy aprendiendo nuevas tecnologías y buscando nuevas formas de mejorar mis proyectos.</p>
+            <div class="container_contactame">
+                <button>Contáctame <img src="../../img/envelope.png" height="18px" alt=""></button>
+                <a href="https://github.com/aleixcaasas" target="_blank"><img  src="../../img/github.svg" alt="" width="40px"></a>
+                <a href="https://www.linkedin.com/in/aleix-casas-203a30264/" target="_blank"><img  src="../../img/linkedin.svg" alt="" width="40px"></a>
+            </div>
+        </div>
 
-
+        <picture class="personal_photo">
+            <img src="../../img/fotoCarnet.png" alt="" width="250px">
+        </picture>
+    </div>
 
 </section>
 
 <style>
 
-    #inicio{
+    @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+    #inicio {
         margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .container_inicio{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        padding: 40px;
+        color: #444;
+        box-shadow: 0 0 20px 8px #d0d0d0;
+        transition: 0.5s ease-in-out;
+        transform: scale(1.1);
+
+
+    }
+
+    .container_inicio:hover{
+        transform: scale(1.12);
+        transition: 0.5s ease-in-out;
+    }
+
+
+
+    h1{
+        font-family: 'Black Ops One', cursive;        
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        background-image: linear-gradient(to right, #FF2424, #434a5be1);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin-block: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container_text{
+        margin-right: 60px;
+        max-width: 550px;
+    }
+
+    h4{
+        font-family: 'Black Ops One', cursive;        
+        max-width: 60ch;
+        font-size: large;
+        margin: 0 0 15px 0;
+    }
+
+    span{
+        font-family: 'Black Ops One', cursive;        
+        color: #5a5858;
+    }
+
+    p{
+        max-width: 60ch;
+        text-align: justify;
+    }
+
+    .personal_photo img{
+        border-radius: 40px;
+    }
+
+    .container_contactame{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    button {
+        font-family:  'Quicksand', sans-serif;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        border: 2px solid black;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 10px 25px;
+        margin: 3px 20px 0 0;
+    }
+
+    button:hover{
+        border: 2px solid #FF2424;
+        color: #FF2424;
+        margin-top: 0;
+        margin-bottom: 3px;
+        transition: cubic-bezier();
+    }
+
+    .container_contactame a{
+        margin-right: 10px;
+    }
+
+    .container_contactame a:hover{
+        cursor: pointer;
+        filter: opacity(.5) drop-shadow(0 0 0 white) brightness(.5); 
     }
 
 </style>
