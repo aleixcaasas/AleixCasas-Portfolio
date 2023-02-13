@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
-*{
-    font-family: 'Quicksand', sans-serif;    
+* {
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* ----------- ANIMATIONS ----------- */
@@ -22,8 +20,8 @@
 
 /* -------------------- BLACK OPS ONE FONT ------------------ */
 
-.font-BOP{
-    font-family: 'Black Ops One', cursive;        
+.font-BOP {
+    font-family: 'Black Ops One', cursive;
 }
 
 
@@ -34,7 +32,7 @@
         width: 0
     }
 }
-    
+
 @keyframes blink {
     50% {
         border-color: transparent
@@ -42,10 +40,9 @@
 }
 
 
-h1{
+h1 {
     background-clip: text;
     -webkit-background-clip: text;
     animation: typing 3s steps(11), blink .5s step-end infinite alternate;
     white-space: nowrap;
 }
-

@@ -1,27 +1,56 @@
-<section id="contacto" class="w-9/12 mx-10 my-16 flex flex-col items-center content-center">
-
-    <div class="container_titol" data-animation="center">     
-        <a href="#contacto" class="uppercase pl-2 my-8 font-bold pb-2 [letter-spacing:10px] text-2xl relative block p-1 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1.8px] before:bg-[#FF2424] before:rounded-lg before:z-[1] before:scale-0 before:origin-center before:transition before:transform before:duration-500 before:ease-in-out hover:before:scale-100"><h2>CONTACTO</h2></a>
+<section
+    id="contacto"
+    class="mx-10 my-16 flex w-9/12 flex-col content-center items-center"
+>
+    <div class="container_titol" data-animation="center">
+        <a
+            href="#contacto"
+            class="relative my-8 block p-1 pl-2 pb-2 text-2xl font-bold uppercase [letter-spacing:10px] before:absolute before:bottom-0 before:left-0 before:z-[1] before:h-[1.8px] before:w-full before:origin-center before:scale-0 before:transform before:rounded-lg before:bg-[#FF2424] before:transition before:duration-500 before:ease-in-out before:content-[''] hover:before:scale-100"
+        >
+            <h2>CONTACTO</h2>
+        </a>
     </div>
-    
-    <form class="w-3/5 mt-8 flex flex-col items-center" action="https://formsubmit.co/acasasbarco@gmail.com" method="POST">
+
+    <form
+        class="mt-8 flex w-3/5 flex-col items-center"
+        action="https://formsubmit.co/acasasbarco@gmail.com"
+        method="POST"
+    >
         <div class="my-3 w-full">
             <label class="uppercase" for="name">Nombre</label>
-            <input class="block w-full h-9 border-b-2 border-black text-base text-black leading-6 pb-1 pl-1 my-0.5 outline-none" name="Nom" type="text" required>
+            <input
+                class="my-0.5 block h-9 w-full border-b-2 border-black pb-1 pl-1 text-base leading-6 text-black outline-none"
+                name="Nom"
+                type="text"
+                required
+            />
         </div>
         <div class="my-3 w-full">
             <label class="uppercase" for="email">Correo Electrónico</label>
-            <input class="block w-full h-9 border-b-2 border-black text-base text-black leading-6 pb-1 pl-1 my-0.5 outline-none" name="Correu" type="email" required>
+            <input
+                class="my-0.5 block h-9 w-full border-b-2 border-black pb-1 pl-1 text-base leading-6 text-black outline-none"
+                name="Correu"
+                type="email"
+                required
+            />
         </div>
         <div class="my-3 w-full">
             <label class="uppercase" for="message">Mensaje</label>
-            <textarea class="block w-full h-28 border-b-2 border-black text-base text-black leading-6 pb-1 pl-1 my-0.5 outline-none " cols="50"  name="Missatge" required="<%= true %>" rows="4"></textarea>
+            <textarea
+                class="my-0.5 block h-28 w-full border-b-2 border-black pb-1 pl-1 text-base leading-6 text-black outline-none"
+                cols="50"
+                name="Missatge"
+                required="<%= true %>"
+                rows="4"></textarea>
         </div>
         <div class="form-field col x-100 align-center">
-            <input class="bg-black text-white uppercase py-3 px-8 border-none cursor-pointer hover:bg-[#686767] tracking-[5px] mt-1.5" type="submit" value="Enviar">
+            <input
+                class="mt-1.5 cursor-pointer border-none bg-black py-3 px-8 uppercase tracking-[5px] text-white hover:bg-[#686767]"
+                type="submit"
+                value="Enviar"
+            />
         </div>
-        <input type="hidden" name="_next" value="http://localhost:3000">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="http://localhost:3000" />
+        <input type="hidden" name="_captcha" value="false" />
     </form>
-
 </section>
