@@ -1,18 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
-*{
-    font-family: 'Quicksand', sans-serif;    
+* {
+    font-family: 'Quicksand', sans-serif;
 }
 
-
 /* ----------- ANIMATIONS ----------- */
+
 .container_titol[data-animation="center"] a::before {
     transform-origin: center;
 }
 
-
 /* ----------- LEFTHOVER ELEMENTS HABILITIES GRID ----------- */
-
 
 .center-lefthovers:last-child:nth-child(3n - 1) {
     grid-column-end: -2;
@@ -20,4 +16,33 @@
 
 .center-lefthovers:nth-last-child(2):nth-child(3n + 1) {
     grid-column-end: 4;
+}
+
+/* -------------------- BLACK OPS ONE FONT ------------------ */
+
+.font-BOP {
+    font-family: 'Black Ops One', cursive;
+}
+
+
+/* -------------------- INIT CARD STYLES -------------------- */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+h1 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: typing 3s steps(11), blink .5s step-end infinite alternate;
+    white-space: nowrap;
 }
