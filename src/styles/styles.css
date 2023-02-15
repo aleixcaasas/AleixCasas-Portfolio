@@ -2,6 +2,22 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* -------------- SCROLLBAR -------------- */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    background-color: #FF2424;
+    border: 2px solid darkgrey;
+}
+
+
 /* ----------- ANIMATIONS ----------- */
 
 .container_titol[data-animation="center"] a::before {
@@ -24,7 +40,7 @@
     font-family: 'Black Ops One', cursive;
 }
 
-.font-Kanit{
+.font-Kanit {
     font-family: 'Kanit', sans-serif;
 }
 

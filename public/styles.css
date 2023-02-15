@@ -2,6 +2,22 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* -------------- SCROLLBAR -------------- */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    background-color: #FF2424;
+    border: 2px solid darkgrey;
+}
+
+
 /* ----------- ANIMATIONS ----------- */
 
 .container_titol[data-animation="center"] a::before {
@@ -22,6 +38,10 @@
 
 .font-BOP {
     font-family: 'Black Ops One', cursive;
+}
+
+.font-Kanit {
+    font-family: 'Kanit', sans-serif;
 }
 
 
@@ -45,4 +65,58 @@ h1 {
     -webkit-background-clip: text;
     animation: typing 3s steps(11), blink .5s step-end infinite alternate;
     white-space: nowrap;
+}
+
+
+
+/* ---------------------- SLIDER PROYECTOS ---------------------- */
+
+
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+
+
+.swiper-navBtn {
+    color: #FF2424;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #FF7272;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #FF7272;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FF2424;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .swiper-navBtn {
+        display: none;
+    }
 }
