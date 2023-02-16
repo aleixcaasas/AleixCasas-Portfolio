@@ -19,7 +19,8 @@
                 "img_tec": "img/coloured_tecnologies/postgreSQL.webp"
             }
         ],
-        "description": "Tienda de camisetas de futbol creada como proyecto de prueba. En este se utilizan las tecnologías de desarrollo web básicas como HTML, CSS, Javascript y Php. También se utilizan sesiones (HTTP), fetch de datos y una base de datos Postgre."
+        "description": "Tienda de camisetas de futbol creada como proyecto de prueba. En este se utilizan las tecnologías de desarrollo web básicas como HTML, CSS, Javascript y Php. También se utilizan sesiones (HTTP), fetch de datos y una base de datos Postgre.",
+        "github": "https://github.com/aleixcaasas/TDIW-Practica"
     },
     {
         "name": "Time Tracker",
@@ -35,7 +36,8 @@
                 "img_tec": "img/coloured_tecnologies/dart.webp"
             }
         ],
-        "description": "Aplicación multiplataforma creada con Flutter para hacer un seguimiento del tiempo que el usuario emplea en realizar diferentes tareas. Parte del servidor desarrollada con Java y aplicación desarrollada con Flutter para entornos Web, Android y iOS."
+        "description": "Aplicación multiplataforma creada con Flutter para hacer un seguimiento del tiempo que el usuario emplea en realizar diferentes tareas. Parte del servidor desarrollada con Java y aplicación desarrollada con Flutter para entornos Web, Android y iOS.",
+        "github": "https://github.com/aleixcaasas/Time-Tracker"
     },
     {
         "name": "Sudoku Game and Testing",
@@ -51,7 +53,8 @@
                 "img_tec": "img/coloured_tecnologies/mockito.webp"
             }
         ],
-        "description": "Juego de Sudoku creado para terminal y con diferentes colores para la variedad de fichas que se encuentran en el tablero. Creada con Java y testeada con JUnit y Mockito para realizar test de interficies, de caja blanca y de caja negra."
+        "description": "Juego de Sudoku creado para terminal y con diferentes colores para la variedad de fichas que se encuentran en el tablero. Creada con Java y testeada con JUnit y Mockito para realizar test de interficies, de caja blanca y de caja negra.",
+        "github": "https://github.com/aleixcaasas/TQS-sudoku_game"
     },
     {
         "name": "Shirts Division",
@@ -73,6 +76,7 @@
                 "img_tec": "img/coloured_tecnologies/postgreSQL.webp"
             }
         ],
-        "description": "Tienda de camisetas de futbol creada como proyecto de prueba. En este se utilizan las tecnologías de desarrollo web básicas como HTML, CSS, Javascript y Php. También se utilizan sesiones (HTTP), fetch de datos y una base de datos Postgre."
+        "description": "Tienda de camisetas de futbol creada como proyecto de prueba. En este se utilizan las tecnologías de desarrollo web básicas como HTML, CSS, Javascript y Php. También se utilizan sesiones (HTTP), fetch de datos y una base de datos Postgre.",
+        "github": "https://github.com/aleixcaasas/TDIW-Practica"
     }
 ]

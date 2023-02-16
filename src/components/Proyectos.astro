@@ -18,214 +18,48 @@ import proyectos from "../config/proyectos.json";
 
     <div class="swiper mySwiper mt-10 max-w-[85%]">
         <div class="swiper-wrapper">
-            <div class="swiper-slide w-1/2 bg-[#eff6ff] px-14 py-10">
-                <div class="h-2/5" style="height:40%;">
-                    <img
-                        class="card-img mb-3"
-                        src="img/projects/shirts_division.webp"
-                    />
-                </div>
+            {
+                proyectos.map((proyecto) => (
+                    <div class="swiper-slide w-1/2 bg-[#eff6ff] px-14 py-10">
+                        <div class="h-2/5" style="height:40%;">
+                            <img class="card-img mb-3" src={proyecto.image} />
+                        </div>
 
-                <div class="card-content">
-                    <h2 class="te font-Kanit text-3xl">Shirts division</h2>
+                        <div class="card-content">
+                            <h2 class="te font-Kanit text-3xl">
+                                {proyecto.name}
+                            </h2>
+                            <div class="my-3 flex flex-row">
+                                {proyecto.tecnologies.map((tecnology) => (
+                                    <img
+                                        src={tecnology.img_tec}
+                                        alt=""
+                                        style="height: 30px; margin-right: 8px;"
+                                    />
+                                ))}
+                            </div>
+                            <div class="flex flex-col">
+                                <p class="m-auto text-justify">
+                                    {proyecto.description}
+                                </p>
+                            </div>
 
-                    <div class="my-3 flex flex-row">
-                        <img
-                            src="img/coloured_tecnologies/html-5.webp"
-                            alt=""
-                            style="height: 30px; margin-right: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/css-3.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/javascript.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/php.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/postgreSQL.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
+                            <div class="flex w-full flex-row-reverse">
+                                <a
+                                    class="cursor-pointer hover:opacity-50 hover:brightness-50 hover:drop-shadow-[white]"
+                                    href={proyecto.github}
+                                >
+                                    <img
+                                        class="h-10"
+                                        src="img/github.webp"
+                                        alt=""
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col">
-                        <p class="m-auto text-justify">
-                            Tienda de camisetas de futbol creada como proyecto
-                            de prueba. En este se utilizan las tecnologías de
-                            desarrollo web básicas como HTML, CSS, Javascript y
-                            Php. También se utilizan sesiones (HTTP), fetch de
-                            datos y una base de datos Postgre.
-                        </p>
-                    </div>
-
-                    <div class="flex w-full flex-row-reverse">
-                        <a
-                            class="cursor-pointer hover:opacity-50 hover:brightness-50 hover:drop-shadow-[white]"
-                            href="https://github.com/aleixcaasas/TDIW-Practica"
-                        >
-                            <img class="h-10" src="img/github.webp" alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide w-1/2 bg-[#eff6ff] px-14 py-10">
-                <div class="mb-3 h-2/5" style="height:40%;">
-                    <img
-                        class="card-img"
-                        src="img/projects/TimeTracker.webp"
-                        alt=""
-                    />
-                </div>
-
-                <div class="card-content">
-                    <h2 class="te font-Kanit text-3xl">Time Tracker</h2>
-
-                    <div class="my-3 flex flex-row">
-                        <img
-                            src="img/coloured_tecnologies/java.webp"
-                            alt=""
-                            style="height: 30px; margin-right: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/flutter.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/dart.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                    </div>
-
-                    <div class="flex flex-col">
-                        <p class="m-auto text-justify">
-                            Aplicación multiplataforma creada con Flutter para
-                            hacer un seguimiento del tiempo que el usuario
-                            emplea en realizar diferentes tareas. Parte del
-                            servidor desarrollada con Java y aplicación
-                            desarrollada con Flutter para entornos Web, Android
-                            y ios.
-                        </p>
-                    </div>
-
-                    <div class="flex w-full flex-row-reverse">
-                        <a
-                            class="cursor-pointer hover:opacity-50 hover:brightness-50 hover:drop-shadow-[white]"
-                            href="https://github.com/aleixcaasas/Time-Tracker"
-                        >
-                            <img class="h-10" src="img/github.webp" alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide w-1/2 bg-[#eff6ff] px-14 py-10">
-                <img class="card-img mb-3" src="img/projects/sudoku.webp" />
-
-                <div class="card-content">
-                    <h2 class="te font-Kanit text-3xl">
-                        Sudoku Game and Testing
-                    </h2>
-
-                    <div class="my-3 flex flex-row">
-                        <img
-                            src="img/coloured_tecnologies/java.webp"
-                            alt=""
-                            style="height: 30px; margin-right: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/junit5.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/mockito.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                    </div>
-
-                    <p class="text-justify">
-                        Juego de Sudoku creado para terminal y con diferentes
-                        colores para la variedad de fichas que se encuentran en
-                        el tablero. Creada con Java y testeada con JUnit y
-                        Mockito para realizar test de interficies, de caja
-                        blanca y de caja negra.
-                    </p>
-                    <div class="flex w-full flex-row-reverse">
-                        <a
-                            class="hover:cursor-pointer hover:opacity-50 hover:brightness-50 hover:drop-shadow-[white]"
-                            href="https://github.com/aleixcaasas/TQS-sudoku_game"
-                        >
-                            <img class="h-10" src="img/github.webp" alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide w-1/2 bg-[#eff6ff] px-14 py-10">
-                <img
-                    class="card-img mb-3"
-                    src="img/projects/shirts_division.webp"
-                    alt=""
-                />
-
-                <div class="card-content">
-                    <h2 class="te font-Kanit text-3xl">Shirts division</h2>
-
-                    <div class="my-3 flex flex-row">
-                        <img
-                            src="img/coloured_tecnologies/html-5.webp"
-                            alt=""
-                            style="height: 30px; margin-right: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/css-3.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/javascript.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/php.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                        <img
-                            src="img/coloured_tecnologies/postgreSQL.webp"
-                            alt=""
-                            style="height: 30px; margin-inline: 8px;"
-                        />
-                    </div>
-
-                    <p class="text-justify">
-                        Tienda de camisetas de futbol creada para aprender las
-                        tecnologías básicas de desarrollo web
-                    </p>
-                    <div class="flex w-full flex-row-reverse">
-                        <a
-                            class="hover:cursor-pointer hover:opacity-50 hover:brightness-50 hover:drop-shadow-[white]"
-                            href="https://github.com/aleixcaasas"
-                            target="_blank"
-                        >
-                            <img class="h-10" src="img/github.webp" alt="" />
-                        </a>
-                    </div>
-                </div>
-            </div>
+                ))
+            }
         </div>
 
         <div class="mt-8">
