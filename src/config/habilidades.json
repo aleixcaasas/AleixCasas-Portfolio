@@ -1,0 +1,50 @@
+[
+    {
+        "name": "HTML",
+        "image": "img/coloured_tecnologies/html-5.webp"
+    },
+    {
+        "name": "CSS",
+        "image": "img/coloured_tecnologies/css-3.webp"
+    },
+    {
+        "name": "JavaScript",
+        "image": "img/coloured_tecnologies/javascript.webp"
+    },
+    {
+        "name": "Astro",
+        "image": "img/coloured_tecnologies/astro.webp"
+    },
+    {
+        "name": "Tailwind CSS",
+        "image": "img/coloured_tecnologies/tailwind-css.webp"
+    },
+    {
+        "name": "C++",
+        "image": "img/coloured_tecnologies/c++.webp"
+    },
+    {
+        "name": "Java",
+        "image": "img/coloured_tecnologies/java.webp"
+    },
+    {
+        "name": "Python",
+        "image": "img/coloured_tecnologies/python.webp"
+    },
+    {
+        "name": "SQL",
+        "image": "img/coloured_tecnologies/postgreSQL.webp"
+    },
+    {
+        "name": "Php",
+        "image": "img/coloured_tecnologies/php.webp"
+    },
+    {
+        "name": "MongoDB",
+        "image": "img/coloured_tecnologies/mongodb.webp"
+    },
+    {
+        "name": "Git",
+        "image": "img/coloured_tecnologies/git.webp"
+    }
+]
