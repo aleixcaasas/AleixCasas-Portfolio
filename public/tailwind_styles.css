@@ -585,11 +585,6 @@ video {
   margin-right: 2.5rem;
 }
 
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
 .mx-36 {
   margin-left: 9rem;
   margin-right: 9rem;
@@ -745,12 +740,8 @@ video {
   height: 2.25rem;
 }
 
-.h-\[150px\] {
-  height: 150px;
-}
-
-.h-full {
-  height: 100%;
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-10 {
@@ -869,10 +860,6 @@ video {
 
 .gap-y-12 {
   row-gap: 3rem;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .rounded-2xl {

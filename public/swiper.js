@@ -1,10 +1,15 @@
-var swiper = new Swiper(".slide-content", {
-    slidesPerView: 2,
-    spaceBetween: 50,
-    loop: false,
-    centerSlide: "true",
-    fade: "true",
-    grabCursor: "true",
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -13,14 +18,5 @@ var swiper = new Swiper(".slide-content", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
     },
 });

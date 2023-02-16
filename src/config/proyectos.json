@@ -3,11 +3,21 @@
         "name": "Shirts Division",
         "image": "img/projects/shirts_division.webp",
         "tecnologies": [
-            {"img_tec": "img/coloured_tecnologies/html-5.webp"},
-            {"img_tec": "img/coloured_tecnologies/css-3.webp"},
-            {"img_tec": "img/coloured_tecnologies/javascript.webp"},
-            {"img_tec": "img/coloured_tecnologies/php.webp"},
-            {"img_tec": "img/coloured_tecnologies/postgreSQL.webp"}
+            {
+                "img_tec": "img/coloured_tecnologies/html-5.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/css-3.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/javascript.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/php.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/postgreSQL.webp"
+            }
         ],
         "description": "Tienda de camisetas de futbol creada como proyecto de prueba. En este se utilizan las tecnologías de desarrollo web básicas como HTML, CSS, Javascript y Php. También se utilizan sesiones (HTTP), fetch de datos y una base de datos Postgre."
     },
@@ -15,9 +25,15 @@
         "name": "Time Tracker",
         "image": "img/projects/TimeTracker.webp",
         "tecnologies": [
-            {"img_tec": "img/coloured_tecnologies/java.webp"},
-            {"img_tec": "img/coloured_tecnologies/flutter.webp"},
-            {"img_tec": "img/coloured_tecnologies/dart.webp"}
+            {
+                "img_tec": "img/coloured_tecnologies/java.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/flutter.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/dart.webp"
+            }
         ],
         "description": "Aplicación multiplataforma creada con Flutter para hacer un seguimiento del tiempo que el usuario emplea en realizar diferentes tareas. Parte del servidor desarrollada con Java y aplicación desarrollada con Flutter para entornos Web, Android y iOS."
     },
@@ -25,9 +41,15 @@
         "name": "Sudoku Game and Testing",
         "image": "img/projects/sudoku.webp",
         "tecnologies": [
-            {"img_tec": "img/coloured_tecnologies/java.webp"},
-            {"img_tec": "img/coloured_tecnologies/junit5.webp"},
-            {"img_tec": "img/coloured_tecnologies/mockito.webp"}
+            {
+                "img_tec": "img/coloured_tecnologies/java.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/junit5.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/mockito.webp"
+            }
         ],
         "description": "Juego de Sudoku creado para terminal y con diferentes colores para la variedad de fichas que se encuentran en el tablero. Creada con Java y testeada con JUnit y Mockito para realizar test de interficies, de caja blanca y de caja negra."
     },
@@ -35,11 +57,21 @@
         "name": "Shirts Division",
         "image": "img/projects/shirts_division.webp",
         "tecnologies": [
-            {"img_tec": "img/coloured_tecnologies/html-5.webp"},
-            {"img_tec": "img/coloured_tecnologies/css-3.webp"},
-            {"img_tec": "img/coloured_tecnologies/javascript.webp"},
-            {"img_tec": "img/coloured_tecnologies/php.webp"},
-            {"img_tec": "img/coloured_tecnologies/postgreSQL.webp"}
+            {
+                "img_tec": "img/coloured_tecnologies/html-5.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/css-3.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/javascript.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/php.webp"
+            },
+            {
+                "img_tec": "img/coloured_tecnologies/postgreSQL.webp"
+            }
         ],
         "description": "Tienda de camisetas de futbol creada como proyecto de prueba. En este se utilizan las tecnologías de desarrollo web básicas como HTML, CSS, Javascript y Php. También se utilizan sesiones (HTTP), fetch de datos y una base de datos Postgre."
     }
