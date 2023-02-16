@@ -70,8 +70,7 @@
     visibility: hidden
 }
 
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
+.swiper-autoheight {
     height: auto
 }
 
