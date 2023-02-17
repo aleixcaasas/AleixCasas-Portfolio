@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Aleix Casas</h1>
 <h3 align="center">A passionate Software Engineer student from Barcelona</h3>
 
-- 🔭 I’m currently studying [Enginyeria Informàtica](http://www.uab.cat)
+- 🔭 I’m currently studying [Enginyeria Informàtica](http://www.uab.cat) in Universitat Autònoma de Barcelona
 
 - 🌱 I’m currently learning **Frontend Development**
 
