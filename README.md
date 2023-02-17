@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **Frontend Development**
 
-- 👨‍💻 All of my projects are available at [https://www.aleixcaasas.netlify.app](https://www.aleixcaasas.netlify.app)
+- 👨‍💻 All of my projects are available at [https://www.aleixcaasas.netlify.app](https://aleixcaasas.netlify.app/)
 
 - 📫 How to reach me **acasasbarco@gmail.com**
 
