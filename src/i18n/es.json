@@ -1,8 +1,8 @@
 {
   "lang": "es",
   "meta": {
-    "title": "Aleix Casas — Ingeniero de software",
-    "description": "Ingeniero de software en Barcelona. Construyo y opero sistemas de backend que tienen que aguantar: Python/Django sobre PostgreSQL, IA generativa en producción y Kubernetes sobre GCP."
+    "title": "Aleix Casas — Ingeniero de software full stack",
+    "description": "Ingeniero de software full stack en Barcelona. Construyo y opero sistemas que tienen que aguantar: Python/Django sobre PostgreSQL, front ends en Angular, IA generativa en producción y Kubernetes sobre GCP."
   },
   "nav": {
     "about": "Sobre mí",
@@ -22,7 +22,7 @@
   },
   "hero": {
     "location": "Barcelona, España",
-    "role": "Ingeniero de software · Backend y plataforma",
+    "role": "Ingeniero de software full stack",
     "intro": "Construyo y opero sistemas que tienen que aguantar. Tres años en el equipo de producto de una plataforma SaaS de analítica: APIs REST en Django sobre PostgreSQL con decenas de millones de registros, IA generativa en producción y servicios corriendo sobre Kubernetes. Máster en Desarrollo y Arquitectura de Software, La Salle (URL), 2026.",
     "cta": "Ver mi trabajo"
   },
@@ -31,7 +31,7 @@
     "title": "Sobre mí",
     "paragraphs": [
       "Trabajo en un equipo de tres, y eso significa que soy responsable de lo que entrego: las decisiones de diseño, la entrega y las consecuencias. Aprendí pronto que lo interesante de una funcionalidad rara vez es el código, sino el modelo de datos que hay debajo y qué pasa cuando ese volumen crece.",
-      "La mayor parte de mi tiempo va al backend y a los datos: APIs REST en Django, PostgreSQL, planes de consulta, índices y sacar del camino crítico todo lo que pesa. Últimamente lo he dedicado a las partes que solo aparecen bajo carga —pooling de conexiones, backpressure, autoescalado que haga lo que crees que hace— y a conseguir que un modelo de lenguaje haga algo realmente útil dentro de un producto.",
+      "La mayor parte de mi tiempo va al backend y a los datos: APIs REST en Django, PostgreSQL, planes de consulta, índices y sacar del camino crítico todo lo que pesa. La otra parte es el front end —Angular, y la migración de todo un código a reactividad basada en signals—. Últimamente lo he dedicado a las partes que solo aparecen bajo carga —pooling de conexiones, backpressure, autoescalado que haga lo que crees que hace— y a conseguir que un modelo de lenguaje haga algo realmente útil dentro de un producto.",
       "Acabo de terminar el Máster en Desarrollo y Arquitectura de Software en La Salle (URL). Me interesan los sistemas que tienen que aguantar: diseño de datos, rendimiento y decisiones que sigan teniendo sentido dentro de dos años."
     ]
   },

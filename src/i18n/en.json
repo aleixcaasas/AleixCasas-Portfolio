@@ -1,8 +1,8 @@
 {
   "lang": "en",
   "meta": {
-    "title": "Aleix Casas — Software Engineer",
-    "description": "Software Engineer in Barcelona. I build and operate backend systems that have to hold up: Python/Django over PostgreSQL, LLM features in production, and Kubernetes on GCP."
+    "title": "Aleix Casas — Full Stack Software Engineer",
+    "description": "Full Stack Software Engineer in Barcelona. I build and operate systems that have to hold up: Python/Django over PostgreSQL, Angular front ends, LLM features in production, and Kubernetes on GCP."
   },
   "nav": {
     "about": "About",
@@ -22,7 +22,7 @@
   },
   "hero": {
     "location": "Barcelona, Spain",
-    "role": "Software Engineer · Backend & Platform",
+    "role": "Full Stack Software Engineer",
     "intro": "I build and operate systems that have to hold up. Three years in the product team of a SaaS analytics platform: Django REST APIs over PostgreSQL holding tens of millions of records, generative AI shipped to production, and services running on Kubernetes. MSc in Software Development & Architecture, La Salle (URL), 2026.",
     "cta": "See my work"
   },
@@ -31,7 +31,7 @@
     "title": "About me",
     "paragraphs": [
       "I work in a team of three, which means I own what I ship: the design decisions, the delivery and the consequences. It taught me early that the interesting part of a feature is rarely the code — it's the schema underneath it and what happens when the data grows.",
-      "Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes and moving expensive work off the critical path. Recently I've spent it on the parts that only show up under load — connection pooling, backpressure, autoscaling that does what you think it does — and on getting an LLM to do something genuinely useful inside a product.",
+      "Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes and moving expensive work off the critical path. The other part is the front end — Angular, and the migration of a whole codebase to signal-based reactivity. Recently I've spent it on the parts that only show up under load — connection pooling, backpressure, autoscaling that does what you think it does — and on getting an LLM to do something genuinely useful inside a product.",
       "I've just finished an MSc in Software Development & Architecture at La Salle (URL). I'm interested in systems that have to hold up: data design, performance, and decisions that still make sense two years later."
     ]
   },
