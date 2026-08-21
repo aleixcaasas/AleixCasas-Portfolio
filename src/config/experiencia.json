@@ -1,0 +1,16 @@
+[
+  {
+    "role": "Full Stack Software Engineer",
+    "company": "IdenCity",
+    "location": "Barcelona",
+    "period": "June 2023 — Present",
+    "summary": "IDDIGO, a SaaS urban analytics platform tracking over 1,000 performance indicators for cities and territories. I work in a product team of three engineers, which means owning what I ship end to end.",
+    "points": [
+      "Built the platform's AI report generation from scratch: the layer that gathers and structures the full data context, plus the call to Google Gemini. What users previously wrote by hand now takes seconds.",
+      "Converted the Angular application into a component embeddable in third-party websites, which required a new authentication system. Live in production.",
+      "Migrated the frontend from imperative to reactive Angular (signal-based state, modern syntax) and built the testing system from zero on a codebase that had none.",
+      "Django REST APIs over PostgreSQL holding tens of millions of records; cut the heaviest endpoints from several seconds to under one through query and index optimisation.",
+      "Mentored two junior developers through code review, pairing and technical growth plans."
+    ]
+  }
+]

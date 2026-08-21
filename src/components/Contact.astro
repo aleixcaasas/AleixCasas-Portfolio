@@ -1,0 +1,89 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section id="contact" class="mx-auto w-full max-w-content px-5 py-16 sm:px-8 sm:py-20">
+  <SectionTitle kicker="Get in touch" title="Contact" />
+
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
+    <div class="flex flex-col gap-4">
+      <p class="max-w-[50ch] text-zinc-700 dark:text-zinc-300">
+        Open to backend and platform roles in Barcelona. Happy to talk about a role, a system you're
+        building, or anything on this page.
+      </p>
+      <a
+        href="mailto:acasasbarco@gmail.com"
+        class="font-mono text-sm text-zinc-700 underline decoration-accent decoration-2 underline-offset-4 hover:text-accent dark:text-zinc-300"
+        >acasasbarco@gmail.com</a
+      >
+      <div class="mt-2 flex gap-3">
+        <a
+          href="https://www.linkedin.com/in/aleixcaasas/"
+          target="_blank"
+          rel="noopener"
+          class="grid h-11 w-11 place-items-center rounded-md border border-zinc-300 transition-colors hover:border-accent dark:border-zinc-700 dark:bg-zinc-200"
+          aria-label="LinkedIn"
+        >
+          <img class="h-5 w-5" src="/img/linkedin.webp" alt="" width="20" height="20" />
+        </a>
+        <a
+          href="https://github.com/aleixcaasas"
+          target="_blank"
+          rel="noopener"
+          class="grid h-11 w-11 place-items-center rounded-md border border-zinc-300 transition-colors hover:border-accent dark:border-zinc-700 dark:bg-zinc-200"
+          aria-label="GitHub"
+        >
+          <img class="h-5 w-5" src="/img/github.webp" alt="" width="20" height="20" />
+        </a>
+      </div>
+    </div>
+
+    <form
+      class="flex flex-col gap-5"
+      action="https://formsubmit.co/acasasbarco@gmail.com"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="Message from aleixcaasas.netlify.app" />
+      <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+      <div class="flex flex-col gap-1.5">
+        <label class="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400" for="name">Name</label>
+        <input
+          id="name"
+          name="Name"
+          type="text"
+          required
+          class="w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label class="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400" for="email">Email</label>
+        <input
+          id="email"
+          name="Email"
+          type="email"
+          required
+          class="w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label class="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400" for="message">Message</label>
+        <textarea
+          id="message"
+          name="Message"
+          rows="5"
+          required
+          class="w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="self-start rounded-md bg-ink px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent dark:bg-zinc-100 dark:text-ink dark:hover:bg-accent dark:hover:text-white"
+        >Send message</button
+      >
+    </form>
+  </div>
+</section>

@@ -1,19 +1,9 @@
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
-
-// https://astro.build/config
-
-// https://astro.build/config
+// Desplegado en Netlify en la raíz del dominio.
+// OJO: no volver a poner `base`, es lo que rompía las rutas de las imágenes.
 export default defineConfig({
-  site: 'https://aleixcaasas.github.io',
-  base: '/AleixCasas-Portfolio',
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  })]
+  site: 'https://aleixcaasas.netlify.app',
+  integrations: [tailwind()],
 });

@@ -1,70 +1,58 @@
-<footer class="bg-[#434a5be1] text-white">
-    <div class="sticky mt-12 flex w-full flex-col content-center items-center">
-        <div class="mt-8 flex flex-col items-center">
-            <a href="/">
-                <img
-                    class="personal_logo h-52"
-                    src="/AleixCasas-Portfolio/img/horizontal_logo_inverted.webp"
-                    alt=""
-                />
-            </a>
-        </div>
+---
+const year = new Date().getFullYear();
+---
 
-        <div class="mt-10">
-            <ul class="flex flex-row gap-24 px-8">
-                <a
-                    href="https://www.instagram.com/aleixcaasas/"
-                    target="_blank"
-                >
-                    <li class="bold inline px-5">
-                        <img
-                            class="hover:cursor-pointer hover:opacity-50 hover:brightness-50"
-                            src="/AleixCasas-Portfolio/img/instagram.webp"
-                            alt=""
-                            width="50px"
-                        />
-                    </li>
-                </a>
-                <a href="https://twitter.com/aleixcaasas" target="_blank">
-                    <li class="bold inline px-5">
-                        <img
-                            class="hover:cursor-pointer hover:opacity-50 hover:brightness-50"
-                            src="/AleixCasas-Portfolio/img/twitter.webp"
-                            alt=""
-                            width="50px"
-                        />
-                    </li>
-                </a>
-                <a href="https://github.com/aleixcaasas" target="_blank">
-                    <li class="bold inline px-5">
-                        <img
-                            class="hover:cursor-pointer hover:opacity-50 hover:brightness-50"
-                            src="/AleixCasas-Portfolio/img/github.webp"
-                            alt=""
-                            width="50px"
-                        />
-                    </li>
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/aleix-casas-203a30264/"
-                    target="_blank"
-                >
-                    <li class="bold inline px-5">
-                        <img
-                            class="hover:cursor-pointer hover:opacity-50 hover:brightness-50"
-                            src="/AleixCasas-Portfolio/img/linkedin.webp"
-                            alt=""
-                            width="50px"
-                        />
-                    </li>
-                </a>
-            </ul>
-        </div>
+<footer class="mt-8 border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-[#0B0E12]">
+  <div
+    class="mx-auto flex max-w-content flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row sm:px-8"
+  >
+    <a href="#top" aria-label="Back to top">
+      <img
+        class="h-10 w-auto dark:hidden"
+        src="/img/horizontal_logo.webp"
+        alt="Aleix Casas"
+        width="180"
+        height="40"
+      />
+      <img
+        class="hidden h-10 w-auto dark:block"
+        src="/img/horizontal_logo_inverted.webp"
+        alt="Aleix Casas"
+        width="180"
+        height="40"
+      />
+    </a>
 
-        <div class="my-4 text-base">
-            <p>
-                &copy; Aleix Casas Barco - Todos los derechos reservados - 2023
-            </p>
-        </div>
+    <div class="flex items-center gap-3">
+      <a
+        href="https://www.linkedin.com/in/aleixcaasas/"
+        target="_blank"
+        rel="noopener"
+        class="grid h-10 w-10 place-items-center rounded-md border border-zinc-300 transition-colors hover:border-accent dark:border-zinc-700 dark:bg-zinc-200"
+        aria-label="LinkedIn"
+      >
+        <img class="h-5 w-5" src="/img/linkedin.webp" alt="" width="20" height="20" />
+      </a>
+      <a
+        href="https://github.com/aleixcaasas"
+        target="_blank"
+        rel="noopener"
+        class="grid h-10 w-10 place-items-center rounded-md border border-zinc-300 transition-colors hover:border-accent dark:border-zinc-700 dark:bg-zinc-200"
+        aria-label="GitHub"
+      >
+        <img class="h-5 w-5" src="/img/github.webp" alt="" width="20" height="20" />
+      </a>
+      <a
+        href="mailto:acasasbarco@gmail.com"
+        class="grid h-10 w-10 place-items-center rounded-md border border-zinc-300 transition-colors hover:border-accent dark:border-zinc-700"
+        aria-label="Email"
+      >
+        <img class="h-5 w-5" src="/img/envelope.webp" alt="" width="20" height="20" />
+      </a>
     </div>
+
+    <p class="font-mono text-xs text-zinc-500 dark:text-zinc-400">
+      © {year} Aleix Casas Barco
+    </p>
+  </div>
 </footer>

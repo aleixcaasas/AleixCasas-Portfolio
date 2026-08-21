@@ -1,50 +1,9 @@
 [
-  {
-    "name": "HTML",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/html-5.webp"
-  },
-  {
-    "name": "CSS",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/css-3.webp"
-  },
-  {
-    "name": "JavaScript",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/javascript.webp"
-  },
-  {
-    "name": "Astro",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/astro.webp"
-  },
-  {
-    "name": "Tailwind CSS",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/tailwind-css.webp"
-  },
-  {
-    "name": "C++",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/c++.webp"
-  },
-  {
-    "name": "Java",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/java.webp"
-  },
-  {
-    "name": "Python",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/python.webp"
-  },
-  {
-    "name": "SQL",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/postgreSQL.webp"
-  },
-  {
-    "name": "Php",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/php.webp"
-  },
-  {
-    "name": "MongoDB",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/mongodb.webp"
-  },
-  {
-    "name": "Git",
-    "image": "/AleixCasas-Portfolio/img/coloured_tecnologies/git.webp"
-  }
+  { "group": "Languages", "items": ["Python", "TypeScript", "JavaScript", "SQL"] },
+  { "group": "Backend", "items": ["Django", "Django REST Framework", "Celery", "Node.js", "REST API design"] },
+  { "group": "Frontend", "items": ["Angular", "React", "Tailwind CSS", "Astro"] },
+  { "group": "Data", "items": ["PostgreSQL", "Redis", "BigQuery", "Schema design", "Query optimisation"] },
+  { "group": "Infrastructure", "items": ["Kubernetes", "Terraform", "Docker", "Google Cloud", "GitHub Actions", "CI/CD"] },
+  { "group": "Observability & quality", "items": ["Prometheus", "Grafana", "Load testing", "Unit & E2E testing", "Code review"] },
+  { "group": "AI", "items": ["LLM integration (Google Gemini)", "Context layer design"] }
 ]

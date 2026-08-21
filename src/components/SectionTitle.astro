@@ -1,0 +1,13 @@
+---
+const { id, title, kicker } = Astro.props;
+---
+
+<div class="mb-8 sm:mb-10">
+  {kicker && (
+    <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">{kicker}</p>
+  )}
+  <h2 id={id} class="mt-2 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+    {title}
+  </h2>
+  <div class="mt-4 h-[2px] w-12 bg-accent"></div>
+</div>
