@@ -1,26 +1,12 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
+const { t } = Astro.props;
 ---
 
 <section id="about" class="mx-auto w-full max-w-content px-5 py-16 sm:px-8 sm:py-20">
-  <SectionTitle kicker="A bit of context" title="About me" />
+  <SectionTitle kicker={t.about.kicker} title={t.about.title} />
 
   <div class="flex max-w-[68ch] flex-col gap-4 text-zinc-700 dark:text-zinc-300">
-    <p>
-      I work in a team of three, which means I own what I ship: the design decisions, the delivery
-      and the consequences. It taught me early that the interesting part of a feature is rarely the
-      code — it's the schema underneath it and what happens when the data grows.
-    </p>
-    <p>
-      Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes
-      and moving expensive work off the critical path. Recently I've spent it on the parts that only
-      show up under load — connection pooling, backpressure, autoscaling that does what you think it
-      does — and on getting an LLM to do something genuinely useful inside a product.
-    </p>
-    <p>
-      I've just finished an MSc in Software Development &amp; Architecture at La Salle (URL). I'm
-      interested in systems that have to hold up: data design, performance, and decisions that still
-      make sense two years later.
-    </p>
+    {t.about.paragraphs.map((p) => <p>{p}</p>)}
   </div>
 </section>

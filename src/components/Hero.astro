@@ -1,35 +1,18 @@
+---
+const { t } = Astro.props;
+---
+
 <section id="top" class="mx-auto w-full max-w-content px-5 pt-14 pb-16 sm:px-8 sm:pt-20 sm:pb-24">
   <div class="flex flex-col-reverse items-start gap-8 md:flex-row md:items-center md:gap-14">
     <div class="w-full">
-      <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent sm:text-sm">
-        Barcelona, Spain
-      </p>
-      <h1 class="mt-3 font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-        Aleix Casas
-      </h1>
-      <p class="mt-3 font-display text-lg font-medium text-zinc-600 sm:text-2xl dark:text-zinc-300">
-        Software Engineer · Backend &amp; Platform
-      </p>
-      <p class="mt-6 max-w-[62ch] text-base leading-relaxed text-zinc-700 sm:text-lg dark:text-zinc-300">
-        I build and operate systems that have to hold up. Three years in the product team of a SaaS
-        analytics platform: Django REST APIs over PostgreSQL holding tens of millions of records,
-        generative AI shipped to production, and services running on Kubernetes. MSc in Software
-        Development &amp; Architecture, La Salle (URL), 2026.
-      </p>
+      <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent sm:text-sm">{t.hero.location}</p>
+      <h1 class="mt-3 font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">Aleix Casas</h1>
+      <p class="mt-3 font-display text-lg font-medium text-zinc-600 sm:text-2xl dark:text-zinc-300">{t.hero.role}</p>
+      <p class="mt-6 max-w-[62ch] text-base leading-relaxed text-zinc-700 sm:text-lg dark:text-zinc-300">{t.hero.intro}</p>
 
       <div class="mt-8 flex flex-wrap items-center gap-3">
-        <a
-          href="#projects"
-          class="rounded-md bg-ink px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-accent dark:bg-zinc-100 dark:text-ink dark:hover:bg-accent dark:hover:text-white"
-          >See my work</a
-        >
-        <a
-          href="/CV_Aleix_Casas.pdf"
-          target="_blank"
-          rel="noopener"
-          class="rounded-md border-2 border-ink px-5 py-[10px] text-sm font-bold transition-colors hover:border-accent hover:text-accent dark:border-zinc-300 dark:hover:border-accent"
-          >Download CV</a
-        >
+        <a href="#projects" class="rounded-md bg-ink px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-accent dark:bg-zinc-100 dark:text-ink dark:hover:bg-accent dark:hover:text-white">{t.hero.cta}</a>
+        <a href="/CV_Aleix_Casas.pdf" target="_blank" rel="noopener" class="rounded-md border-2 border-ink px-5 py-[10px] text-sm font-bold transition-colors hover:border-accent hover:text-accent dark:border-zinc-300 dark:hover:border-accent">{t.nav.cv}</a>
         <a
           href="https://www.linkedin.com/in/aleixcaasas/"
           target="_blank"

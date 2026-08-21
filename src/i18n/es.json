@@ -1,0 +1,135 @@
+{
+  "lang": "es",
+  "meta": {
+    "title": "Aleix Casas — Ingeniero de software",
+    "description": "Ingeniero de software en Barcelona. Construyo y opero sistemas de backend que tienen que aguantar: Python/Django sobre PostgreSQL, IA generativa en producción y Kubernetes sobre GCP."
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Tecnologías",
+    "contact": "Contacto",
+    "cv": "Descargar CV",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "theme": "Cambiar a modo oscuro",
+    "language": "Idioma",
+    "skip": "Ir al contenido",
+    "home": "Aleix Casas — inicio",
+    "top": "Volver arriba"
+  },
+  "hero": {
+    "location": "Barcelona, España",
+    "role": "Ingeniero de software · Backend y plataforma",
+    "intro": "Construyo y opero sistemas que tienen que aguantar. Tres años en el equipo de producto de una plataforma SaaS de analítica: APIs REST en Django sobre PostgreSQL con decenas de millones de registros, IA generativa en producción y servicios corriendo sobre Kubernetes. Máster en Desarrollo y Arquitectura de Software, La Salle (URL), 2026.",
+    "cta": "Ver mi trabajo"
+  },
+  "about": {
+    "kicker": "Un poco de contexto",
+    "title": "Sobre mí",
+    "paragraphs": [
+      "Trabajo en un equipo de tres, y eso significa que soy responsable de lo que entrego: las decisiones de diseño, la entrega y las consecuencias. Aprendí pronto que lo interesante de una funcionalidad rara vez es el código, sino el modelo de datos que hay debajo y qué pasa cuando ese volumen crece.",
+      "La mayor parte de mi tiempo va al backend y a los datos: APIs REST en Django, PostgreSQL, planes de consulta, índices y sacar del camino crítico todo lo que pesa. Últimamente lo he dedicado a las partes que solo aparecen bajo carga —pooling de conexiones, backpressure, autoescalado que haga lo que crees que hace— y a conseguir que un modelo de lenguaje haga algo realmente útil dentro de un producto.",
+      "Acabo de terminar el Máster en Desarrollo y Arquitectura de Software en La Salle (URL). Me interesan los sistemas que tienen que aguantar: diseño de datos, rendimiento y decisiones que sigan teniendo sentido dentro de dos años."
+    ]
+  },
+  "experience": {
+    "kicker": "Dónde he trabajado",
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "role": "Ingeniero de software full stack",
+        "company": "IdenCity",
+        "location": "Barcelona",
+        "period": "Junio 2023 — Actualidad",
+        "summary": "IDDIGO, una plataforma SaaS de analítica urbana con más de 1.000 indicadores de desempeño de ciudades y territorios. Trabajo en un equipo de producto de tres personas, lo que significa hacerme cargo de lo que entrego de principio a fin.",
+        "points": [
+          "Construí desde cero la generación de informes con IA de la plataforma: la capa que reúne y estructura todo el contexto de datos, más la llamada a Google Gemini. Lo que antes redactaba el usuario a mano ahora sale en segundos.",
+          "Convertí la aplicación Angular en un componente incrustable en webs de terceros, lo que exigió un nuevo sistema de autenticación. En producción.",
+          "Migré el frontend de Angular imperativo a reactivo (estado con signals y sintaxis moderna) y monté el sistema de testing desde cero sobre un código que no tenía ninguna prueba.",
+          "APIs REST en Django sobre PostgreSQL con decenas de millones de registros; reduje los endpoints más pesados de varios segundos a menos de uno optimizando consultas e índices.",
+          "Mentoricé a dos desarrolladores junior con revisiones de código, pairing y planes de crecimiento técnico."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "kicker": "Trabajo seleccionado",
+    "title": "Proyectos",
+    "intro": "Casi todo lo que construyo vive detrás de un login o pertenece a un cliente, así que esto está escrito como casos y no como enlaces a repositorios: cuál era el problema, qué decidí y qué salió de ahí.",
+    "items": [
+      {
+        "name": "Vista Flota",
+        "tagline": "De 80 a 5.000 eventos por segundo",
+        "year": "2026",
+        "context": "Trabajo final de máster · La Salle URL",
+        "image": "/img/projects/vista-flota.png",
+        "imageAlt": "Diagrama de arquitectura general de la plataforma Vista Flota sobre Google Cloud",
+        "summary": "Una plataforma IoT de flotas en tiempo real: un dispositivo embarcado en cada camión publica telemetría por MQTT —posición, velocidad, combustible— que la plataforma ingiere, deduplica y convierte en estado de flota en vivo, viajes y alertas sobre un panel de operador, archivando todo el histórico para reconstruir rutas.",
+        "highlights": [
+          "El requisito era 1.000 eventos/s sostenidos con cero pérdida de mensajes. La arquitectura de partida moría por OOM a los 80.",
+          "Quité los cuellos de botella uno a uno —medir, diagnosticar, corregir, revalidar— con Prometheus y Grafana: la deduplicación salió de PostgreSQL a Redis, PgBouncer multiplexando 200 conexiones de cliente sobre 20 reales, backpressure por marcas de agua, MQTT con QoS 1, y KEDA sustituido por HPA cuando el profiling demostró que los pods eran CPU-bound.",
+          "Resultado final: 5.000 eventos/s en pico, 3.200 sostenidos, 0,00 % de pérdida."
+        ],
+        "stack": ["TypeScript", "Kubernetes (GKE)", "Terraform", "MQTT / EMQX", "PostgreSQL", "Redis", "BigQuery", "Prometheus", "Grafana", "Angular"],
+        "note": "Proyecto de equipo dividido en tres áreas (Aplicación, Infraestructura, IoT). Yo llevé el área de Aplicación. El repositorio es privado."
+      },
+      {
+        "name": "Generación de informes con IA",
+        "tagline": "Horas de redacción manual, reducidas a segundos",
+        "year": "2026",
+        "context": "IDDIGO · IdenCity",
+        "image": null,
+        "imageAlt": null,
+        "summary": "IDDIGO recoge más de 1.000 indicadores por territorio, pero leerlos y convertirlos en un análisis escrito era trabajo manual del cliente. Diseñé y construí desde cero la funcionalidad que lo hace de forma automática.",
+        "highlights": [
+          "Lo interesante no es la llamada a la API, sino decidir qué contexto entra en el prompt y qué se queda fuera, y que esa decisión siga siendo barata y acotada a medida que crece el catálogo de indicadores.",
+          "Construí la capa que reúne y estructura todo el contexto de datos de la plataforma y llama a Google Gemini para producir el informe.",
+          "Lo que antes tenía que redactar el usuario a mano ahora se genera en segundos."
+        ],
+        "stack": ["Python", "Django", "Google Gemini", "PostgreSQL"],
+        "note": "Producto propietario: sin repositorio público."
+      },
+      {
+        "name": "Widget incrustable",
+        "tagline": "El mismo producto, corriendo dentro de la web de otro",
+        "year": "2026",
+        "context": "IDDIGO · IdenCity",
+        "image": null,
+        "imageAlt": null,
+        "summary": "Una restricción de negocio —los clientes querían IDDIGO dentro de sus propias webs— que se convirtió en un problema de arquitectura: cómo incrustas una aplicación entera en un dominio ajeno sin duplicar el producto.",
+        "highlights": [
+          "Convertí la aplicación Angular en un componente incrustable en webs de terceros.",
+          "Obligó a rehacer la autenticación desde cero para que funcionara bajo un dominio que no controlamos.",
+          "En producción."
+        ],
+        "stack": ["Angular", "TypeScript", "Django"],
+        "note": "Producto propietario: sin repositorio público."
+      }
+    ]
+  },
+  "skills": {
+    "kicker": "Con qué trabajo",
+    "title": "Tecnologías",
+    "groups": [
+      { "group": "Lenguajes", "items": ["Python", "TypeScript", "JavaScript", "SQL"] },
+      { "group": "Backend", "items": ["Django", "Django REST Framework", "Celery", "Node.js", "Diseño de APIs REST"] },
+      { "group": "Frontend", "items": ["Angular", "React", "Tailwind CSS", "Astro"] },
+      { "group": "Datos", "items": ["PostgreSQL", "Redis", "BigQuery", "Modelado de datos", "Optimización de consultas"] },
+      { "group": "Infraestructura", "items": ["Kubernetes", "Terraform", "Docker", "Google Cloud", "GitHub Actions", "CI/CD"] },
+      { "group": "Observabilidad y calidad", "items": ["Prometheus", "Grafana", "Pruebas de carga", "Tests unitarios y E2E", "Revisión de código"] },
+      { "group": "IA", "items": ["Integración de LLM (Google Gemini)", "Diseño de capas de contexto"] }
+    ]
+  },
+  "contact": {
+    "kicker": "Hablemos",
+    "title": "Contacto",
+    "intro": "Abierto a posiciones de backend y plataforma en Barcelona. Encantado de hablar sobre una oferta, sobre un sistema que estés construyendo o sobre cualquier cosa de esta página.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "subject": "Mensaje desde aleixcaasas.netlify.app"
+  }
+}

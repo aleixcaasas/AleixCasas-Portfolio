@@ -1,24 +1,6 @@
 ---
-import Layout from "../components/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import Skills from "../components/Skills.astro";
-import Contact from "../components/Contact.astro";
-import Footer from "../components/Footer.astro";
+import Site from "../components/Site.astro";
+import t from "../i18n/en.json";
 ---
 
-<Layout>
-  <Navbar />
-  <main id="main">
-    <Hero />
-    <About />
-    <Experience />
-    <Projects />
-    <Skills />
-    <Contact />
-  </main>
-  <Footer />
-</Layout>
+<Site t={t} />

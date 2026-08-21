@@ -1,0 +1,26 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "./Navbar.astro";
+import Hero from "./Hero.astro";
+import About from "./About.astro";
+import Experience from "./Experience.astro";
+import Projects from "./Projects.astro";
+import Skills from "./Skills.astro";
+import Contact from "./Contact.astro";
+import Footer from "./Footer.astro";
+
+const { t } = Astro.props;
+---
+
+<Layout t={t}>
+  <Navbar t={t} />
+  <main id="main">
+    <Hero t={t} />
+    <About t={t} />
+    <Experience t={t} />
+    <Projects t={t} />
+    <Skills t={t} />
+    <Contact t={t} />
+  </main>
+  <Footer t={t} />
+</Layout>

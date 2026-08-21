@@ -1,31 +1,35 @@
 ---
 import "../styles/input.css";
-
-const title = "Aleix Casas — Software Engineer";
-const description =
-  "Software Engineer in Barcelona. I build and operate backend systems that have to hold up: Python/Django over PostgreSQL, LLM features in production, and Kubernetes on GCP.";
+const { t } = Astro.props;
 const url = "https://aleixcaasas.netlify.app";
+const paths = { en: "/", es: "/es/", ca: "/ca/" };
+const canonical = url + paths[t.lang];
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={t.lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={url} />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" href="/img/small_logo.webp" />
 
-    <!-- Open Graph: así el enlace se ve bien al pegarlo en LinkedIn o WhatsApp -->
+    <link rel="alternate" hreflang="en" href={url + "/"} />
+    <link rel="alternate" hreflang="es" href={url + "/es/"} />
+    <link rel="alternate" hreflang="ca" href={url + "/ca/"} />
+    <link rel="alternate" hreflang="x-default" href={url + "/"} />
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={url} />
-    <meta property="og:image" content={`${url}/img/horizontal_logo.webp`} />
+    <meta property="og:locale" content={t.lang} />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={url + "/img/horizontal_logo.webp"} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +38,6 @@ const url = "https://aleixcaasas.netlify.app";
       rel="stylesheet"
     />
 
-    <!-- Tema antes de pintar, para que no haya parpadeo blanco en modo oscuro -->
     <script is:inline>
       (function () {
         try {
@@ -53,7 +56,7 @@ const url = "https://aleixcaasas.netlify.app";
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
-      >Skip to content</a
+      >{t.nav.skip}</a
     >
     <slot />
   </body>

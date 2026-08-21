@@ -1,14 +1,14 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
-import experiencia from "../config/experiencia.json";
+const { t } = Astro.props;
 ---
 
 <section id="experience" class="mx-auto w-full max-w-content px-5 py-16 sm:px-8 sm:py-20">
-  <SectionTitle kicker="Where I've worked" title="Experience" />
+  <SectionTitle kicker={t.experience.kicker} title={t.experience.title} />
 
   <ol class="flex flex-col gap-10">
     {
-      experiencia.map((job) => (
+      t.experience.jobs.map((job) => (
         <li class="border-l-2 border-zinc-200 pl-5 sm:pl-7 dark:border-zinc-800">
           <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
             <h3 class="font-display text-lg font-semibold sm:text-xl">
@@ -23,9 +23,7 @@ import experiencia from "../config/experiencia.json";
 
           <ul class="mt-4 flex list-disc flex-col gap-2 pl-5 marker:text-accent">
             {job.points.map((p) => (
-              <li class="max-w-[70ch] text-[0.95rem] leading-relaxed text-zinc-700 dark:text-zinc-300">
-                {p}
-              </li>
+              <li class="max-w-[70ch] text-[0.95rem] leading-relaxed text-zinc-700 dark:text-zinc-300">{p}</li>
             ))}
           </ul>
         </li>

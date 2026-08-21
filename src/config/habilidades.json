@@ -1,9 +1,0 @@
-[
-  { "group": "Languages", "items": ["Python", "TypeScript", "JavaScript", "SQL"] },
-  { "group": "Backend", "items": ["Django", "Django REST Framework", "Celery", "Node.js", "REST API design"] },
-  { "group": "Frontend", "items": ["Angular", "React", "Tailwind CSS", "Astro"] },
-  { "group": "Data", "items": ["PostgreSQL", "Redis", "BigQuery", "Schema design", "Query optimisation"] },
-  { "group": "Infrastructure", "items": ["Kubernetes", "Terraform", "Docker", "Google Cloud", "GitHub Actions", "CI/CD"] },
-  { "group": "Observability & quality", "items": ["Prometheus", "Grafana", "Load testing", "Unit & E2E testing", "Code review"] },
-  { "group": "AI", "items": ["LLM integration (Google Gemini)", "Context layer design"] }
-]

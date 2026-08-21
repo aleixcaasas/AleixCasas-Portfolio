@@ -1,0 +1,135 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "Aleix Casas — Software Engineer",
+    "description": "Software Engineer in Barcelona. I build and operate backend systems that have to hold up: Python/Django over PostgreSQL, LLM features in production, and Kubernetes on GCP."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "cv": "Download CV",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "theme": "Toggle dark mode",
+    "language": "Language",
+    "skip": "Skip to content",
+    "home": "Aleix Casas — home",
+    "top": "Back to top"
+  },
+  "hero": {
+    "location": "Barcelona, Spain",
+    "role": "Software Engineer · Backend & Platform",
+    "intro": "I build and operate systems that have to hold up. Three years in the product team of a SaaS analytics platform: Django REST APIs over PostgreSQL holding tens of millions of records, generative AI shipped to production, and services running on Kubernetes. MSc in Software Development & Architecture, La Salle (URL), 2026.",
+    "cta": "See my work"
+  },
+  "about": {
+    "kicker": "A bit of context",
+    "title": "About me",
+    "paragraphs": [
+      "I work in a team of three, which means I own what I ship: the design decisions, the delivery and the consequences. It taught me early that the interesting part of a feature is rarely the code — it's the schema underneath it and what happens when the data grows.",
+      "Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes and moving expensive work off the critical path. Recently I've spent it on the parts that only show up under load — connection pooling, backpressure, autoscaling that does what you think it does — and on getting an LLM to do something genuinely useful inside a product.",
+      "I've just finished an MSc in Software Development & Architecture at La Salle (URL). I'm interested in systems that have to hold up: data design, performance, and decisions that still make sense two years later."
+    ]
+  },
+  "experience": {
+    "kicker": "Where I've worked",
+    "title": "Experience",
+    "jobs": [
+      {
+        "role": "Full Stack Software Engineer",
+        "company": "IdenCity",
+        "location": "Barcelona",
+        "period": "June 2023 — Present",
+        "summary": "IDDIGO, a SaaS urban analytics platform tracking over 1,000 performance indicators for cities and territories. I work in a product team of three engineers, which means owning what I ship end to end.",
+        "points": [
+          "Built the platform's AI report generation from scratch: the layer that gathers and structures the full data context, plus the call to Google Gemini. What users previously wrote by hand now takes seconds.",
+          "Converted the Angular application into a component embeddable in third-party websites, which required a new authentication system. Live in production.",
+          "Migrated the frontend from imperative to reactive Angular (signal-based state, modern syntax) and built the testing system from zero on a codebase that had none.",
+          "Django REST APIs over PostgreSQL holding tens of millions of records; cut the heaviest endpoints from several seconds to under one through query and index optimisation.",
+          "Mentored two junior developers through code review, pairing and technical growth plans."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "kicker": "Selected work",
+    "title": "Projects",
+    "intro": "Most of what I build lives behind a login or belongs to a client, so these are written up as case studies rather than repository links: what the problem was, what I decided, and what came out of it.",
+    "items": [
+      {
+        "name": "Vista Flota",
+        "tagline": "From 80 to 5,000 events per second",
+        "year": "2026",
+        "context": "Master's thesis · La Salle URL",
+        "image": "/img/projects/vista-flota.png",
+        "imageAlt": "High-level architecture diagram of the Vista Flota platform on Google Cloud",
+        "summary": "A real-time IoT fleet platform: a device on each truck publishes telemetry over MQTT — position, speed, fuel — which the platform ingests, deduplicates and turns into live fleet state, trips and alerts on an operator dashboard, archiving the full history for route reconstruction.",
+        "highlights": [
+          "The requirement was 1,000 events/s sustained with zero message loss. The baseline architecture died of OOM at 80.",
+          "Removed bottlenecks one at a time — measure, diagnose, fix, re-validate — with Prometheus and Grafana: deduplication moved out of PostgreSQL into Redis, PgBouncer multiplexing 200 client connections over 20 real ones, watermark-based backpressure, MQTT QoS 1, and KEDA replaced by HPA once profiling proved the pods were CPU-bound.",
+          "Final result: 5,000 events/s at peak, 3,200 sustained, 0.00% loss."
+        ],
+        "stack": ["TypeScript", "Kubernetes (GKE)", "Terraform", "MQTT / EMQX", "PostgreSQL", "Redis", "BigQuery", "Prometheus", "Grafana", "Angular"],
+        "note": "Team project across three areas (Application, Infrastructure, IoT). I owned the Application area. Repository is private."
+      },
+      {
+        "name": "AI report generation",
+        "tagline": "Hours of manual writing, down to seconds",
+        "year": "2026",
+        "context": "IDDIGO · IdenCity",
+        "image": null,
+        "imageAlt": null,
+        "summary": "IDDIGO tracks over 1,000 indicators per territory, but reading them and turning them into a written analysis was manual work for the client. I designed and built from scratch the feature that does it automatically.",
+        "highlights": [
+          "The interesting part isn't the API call — it's deciding what context goes into the prompt and what stays out, and keeping that decision cheap and bounded as the indicator catalogue grows.",
+          "Built the layer that gathers and structures the platform's full data context, then calls Google Gemini to produce the report.",
+          "What users previously had to write by hand is now generated in seconds."
+        ],
+        "stack": ["Python", "Django", "Google Gemini", "PostgreSQL"],
+        "note": "Proprietary product — no public repository."
+      },
+      {
+        "name": "Embeddable widget",
+        "tagline": "The same product, running inside someone else's site",
+        "year": "2026",
+        "context": "IDDIGO · IdenCity",
+        "image": null,
+        "imageAlt": null,
+        "summary": "A business constraint — clients wanted IDDIGO inside their own websites — that turned into an architecture problem: how do you embed a full application in a third-party domain without duplicating the product?",
+        "highlights": [
+          "Converted the Angular application into a component embeddable in third-party sites.",
+          "Required rebuilding authentication from the ground up to work under a domain we don't control.",
+          "Live in production."
+        ],
+        "stack": ["Angular", "TypeScript", "Django"],
+        "note": "Proprietary product — no public repository."
+      }
+    ]
+  },
+  "skills": {
+    "kicker": "What I work with",
+    "title": "Skills",
+    "groups": [
+      { "group": "Languages", "items": ["Python", "TypeScript", "JavaScript", "SQL"] },
+      { "group": "Backend", "items": ["Django", "Django REST Framework", "Celery", "Node.js", "REST API design"] },
+      { "group": "Frontend", "items": ["Angular", "React", "Tailwind CSS", "Astro"] },
+      { "group": "Data", "items": ["PostgreSQL", "Redis", "BigQuery", "Schema design", "Query optimisation"] },
+      { "group": "Infrastructure", "items": ["Kubernetes", "Terraform", "Docker", "Google Cloud", "GitHub Actions", "CI/CD"] },
+      { "group": "Observability & quality", "items": ["Prometheus", "Grafana", "Load testing", "Unit & E2E testing", "Code review"] },
+      { "group": "AI", "items": ["LLM integration (Google Gemini)", "Context layer design"] }
+    ]
+  },
+  "contact": {
+    "kicker": "Get in touch",
+    "title": "Contact",
+    "intro": "Open to backend and platform roles in Barcelona. Happy to talk about a role, a system you're building, or anything on this page.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "subject": "Message from aleixcaasas.netlify.app"
+  }
+}

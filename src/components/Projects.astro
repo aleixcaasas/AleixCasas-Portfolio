@@ -1,20 +1,16 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
-import proyectos from "../config/proyectos.json";
+const { t } = Astro.props;
 ---
 
 <section id="projects" class="mx-auto w-full max-w-content px-5 py-16 sm:px-8 sm:py-20">
-  <SectionTitle kicker="Selected work" title="Projects" />
+  <SectionTitle kicker={t.projects.kicker} title={t.projects.title} />
 
-  <p class="-mt-4 mb-10 max-w-[65ch] text-zinc-600 dark:text-zinc-400">
-    Most of what I build lives behind a login or belongs to a client, so these are written up as
-    case studies rather than repository links: what the problem was, what I decided, and what came
-    out of it.
-  </p>
+  <p class="-mt-4 mb-10 max-w-[65ch] text-zinc-600 dark:text-zinc-400">{t.projects.intro}</p>
 
   <div class="flex flex-col gap-8">
     {
-      proyectos.map((p) => (
+      t.projects.items.map((p) => (
         <article class="overflow-hidden rounded-lg border border-zinc-200 bg-white transition-shadow hover:shadow-lg dark:border-zinc-800 dark:bg-[#151A21]">
           {p.image && (
             <img
@@ -28,9 +24,7 @@ import proyectos from "../config/proyectos.json";
           <div class="flex flex-col gap-4 p-5 sm:p-7">
             <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <h3 class="font-display text-xl font-semibold sm:text-2xl">{p.name}</h3>
-              <p class="shrink-0 font-mono text-xs text-zinc-500 dark:text-zinc-400">
-                {p.context} · {p.year}
-              </p>
+              <p class="shrink-0 font-mono text-xs text-zinc-500 dark:text-zinc-400">{p.context} · {p.year}</p>
             </div>
 
             <p class="font-display text-base font-medium text-accent sm:text-lg">{p.tagline}</p>
@@ -39,24 +33,18 @@ import proyectos from "../config/proyectos.json";
 
             <ul class="flex list-disc flex-col gap-2 pl-5 marker:text-accent">
               {p.highlights.map((h) => (
-                <li class="max-w-[70ch] text-[0.95rem] leading-relaxed text-zinc-700 dark:text-zinc-300">
-                  {h}
-                </li>
+                <li class="max-w-[70ch] text-[0.95rem] leading-relaxed text-zinc-700 dark:text-zinc-300">{h}</li>
               ))}
             </ul>
 
             <ul class="mt-1 flex flex-wrap gap-2">
-              {p.stack.map((t) => (
-                <li class="rounded border border-zinc-200 bg-zinc-50 px-2 py-1 font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
-                  {t}
-                </li>
+              {p.stack.map((s) => (
+                <li class="rounded border border-zinc-200 bg-zinc-50 px-2 py-1 font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">{s}</li>
               ))}
             </ul>
 
             {p.note && (
-              <p class="border-t border-zinc-100 pt-4 text-sm italic text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
-                {p.note}
-              </p>
+              <p class="border-t border-zinc-100 pt-4 text-sm italic text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">{p.note}</p>
             )}
           </div>
         </article>

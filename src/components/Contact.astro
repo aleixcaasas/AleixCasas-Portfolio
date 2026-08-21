@@ -1,16 +1,17 @@
 ---
 import SectionTitle from "./SectionTitle.astro";
+const { t } = Astro.props;
+const field =
+  "w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100";
+const label = "font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400";
 ---
 
 <section id="contact" class="mx-auto w-full max-w-content px-5 py-16 sm:px-8 sm:py-20">
-  <SectionTitle kicker="Get in touch" title="Contact" />
+  <SectionTitle kicker={t.contact.kicker} title={t.contact.title} />
 
   <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
     <div class="flex flex-col gap-4">
-      <p class="max-w-[50ch] text-zinc-700 dark:text-zinc-300">
-        Open to backend and platform roles in Barcelona. Happy to talk about a role, a system you're
-        building, or anything on this page.
-      </p>
+      <p class="max-w-[50ch] text-zinc-700 dark:text-zinc-300">{t.contact.intro}</p>
       <a
         href="mailto:acasasbarco@gmail.com"
         class="font-mono text-sm text-zinc-700 underline decoration-accent decoration-2 underline-offset-4 hover:text-accent dark:text-zinc-300"
@@ -38,51 +39,29 @@ import SectionTitle from "./SectionTitle.astro";
       </div>
     </div>
 
-    <form
-      class="flex flex-col gap-5"
-      action="https://formsubmit.co/acasasbarco@gmail.com"
-      method="POST"
-    >
-      <input type="hidden" name="_subject" value="Message from aleixcaasas.netlify.app" />
+    <form class="flex flex-col gap-5" action="https://formsubmit.co/acasasbarco@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value={t.contact.subject} />
       <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
       <div class="flex flex-col gap-1.5">
-        <label class="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400" for="name">Name</label>
-        <input
-          id="name"
-          name="Name"
-          type="text"
-          required
-          class="w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100"
-        />
+        <label class={label} for="name">{t.contact.name}</label>
+        <input id="name" name="Name" type="text" required class={field} />
       </div>
 
       <div class="flex flex-col gap-1.5">
-        <label class="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400" for="email">Email</label>
-        <input
-          id="email"
-          name="Email"
-          type="email"
-          required
-          class="w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100"
-        />
+        <label class={label} for="email">{t.contact.email}</label>
+        <input id="email" name="Email" type="email" required class={field} />
       </div>
 
       <div class="flex flex-col gap-1.5">
-        <label class="font-mono text-xs uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400" for="message">Message</label>
-        <textarea
-          id="message"
-          name="Message"
-          rows="5"
-          required
-          class="w-full rounded-md border border-zinc-300 bg-white px-3 py-2.5 text-base outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-zinc-700 dark:bg-[#151A21] dark:text-zinc-100"
-        ></textarea>
+        <label class={label} for="message">{t.contact.message}</label>
+        <textarea id="message" name="Message" rows="5" required class={field}></textarea>
       </div>
 
       <button
         type="submit"
         class="self-start rounded-md bg-ink px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent dark:bg-zinc-100 dark:text-ink dark:hover:bg-accent dark:hover:text-white"
-        >Send message</button
+        >{t.contact.send}</button
       >
     </form>
   </div>
