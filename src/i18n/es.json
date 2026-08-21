@@ -17,7 +17,8 @@
     "language": "Idioma",
     "skip": "Ir al contenido",
     "home": "Aleix Casas — inicio",
-    "top": "Volver arriba"
+    "top": "Volver arriba",
+    "cvFile": "/CV_Aleix_Casas_ES.pdf"
   },
   "hero": {
     "location": "Barcelona, España",
@@ -72,7 +73,18 @@
           "Quité los cuellos de botella uno a uno —medir, diagnosticar, corregir, revalidar— con Prometheus y Grafana: la deduplicación salió de PostgreSQL a Redis, PgBouncer multiplexando 200 conexiones de cliente sobre 20 reales, backpressure por marcas de agua, MQTT con QoS 1, y KEDA sustituido por HPA cuando el profiling demostró que los pods eran CPU-bound.",
           "Resultado final: 5.000 eventos/s en pico, 3.200 sostenidos, 0,00 % de pérdida."
         ],
-        "stack": ["TypeScript", "Kubernetes (GKE)", "Terraform", "MQTT / EMQX", "PostgreSQL", "Redis", "BigQuery", "Prometheus", "Grafana", "Angular"],
+        "stack": [
+          "TypeScript",
+          "Kubernetes (GKE)",
+          "Terraform",
+          "MQTT / EMQX",
+          "PostgreSQL",
+          "Redis",
+          "BigQuery",
+          "Prometheus",
+          "Grafana",
+          "Angular"
+        ],
         "note": "Proyecto de equipo dividido en tres áreas (Aplicación, Infraestructura, IoT). Yo llevé el área de Aplicación. El repositorio es privado."
       },
       {
@@ -88,7 +100,12 @@
           "Construí la capa que reúne y estructura todo el contexto de datos de la plataforma y llama a Google Gemini para producir el informe.",
           "Lo que antes tenía que redactar el usuario a mano ahora se genera en segundos."
         ],
-        "stack": ["Python", "Django", "Google Gemini", "PostgreSQL"],
+        "stack": [
+          "Python",
+          "Django",
+          "Google Gemini",
+          "PostgreSQL"
+        ],
         "note": "Producto propietario: sin repositorio público."
       },
       {
@@ -104,7 +121,11 @@
           "Obligó a rehacer la autenticación desde cero para que funcionara bajo un dominio que no controlamos.",
           "En producción."
         ],
-        "stack": ["Angular", "TypeScript", "Django"],
+        "stack": [
+          "Angular",
+          "TypeScript",
+          "Django"
+        ],
         "note": "Producto propietario: sin repositorio público."
       }
     ]
@@ -113,13 +134,72 @@
     "kicker": "Con qué trabajo",
     "title": "Tecnologías",
     "groups": [
-      { "group": "Lenguajes", "items": ["Python", "TypeScript", "JavaScript", "SQL"] },
-      { "group": "Backend", "items": ["Django", "Django REST Framework", "Celery", "Node.js", "Diseño de APIs REST"] },
-      { "group": "Frontend", "items": ["Angular", "React", "Tailwind CSS", "Astro"] },
-      { "group": "Datos", "items": ["PostgreSQL", "Redis", "BigQuery", "Modelado de datos", "Optimización de consultas"] },
-      { "group": "Infraestructura", "items": ["Kubernetes", "Terraform", "Docker", "Google Cloud", "GitHub Actions", "CI/CD"] },
-      { "group": "Observabilidad y calidad", "items": ["Prometheus", "Grafana", "Pruebas de carga", "Tests unitarios y E2E", "Revisión de código"] },
-      { "group": "IA", "items": ["Integración de LLM (Google Gemini)", "Diseño de capas de contexto"] }
+      {
+        "group": "Lenguajes",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "group": "Backend",
+        "items": [
+          "Django",
+          "Django REST Framework",
+          "Celery",
+          "Node.js",
+          "Diseño de APIs REST"
+        ]
+      },
+      {
+        "group": "Frontend",
+        "items": [
+          "Angular",
+          "React",
+          "Tailwind CSS",
+          "Astro"
+        ]
+      },
+      {
+        "group": "Datos",
+        "items": [
+          "PostgreSQL",
+          "Redis",
+          "BigQuery",
+          "Modelado de datos",
+          "Optimización de consultas"
+        ]
+      },
+      {
+        "group": "Infraestructura",
+        "items": [
+          "Kubernetes",
+          "Terraform",
+          "Docker",
+          "Google Cloud",
+          "GitHub Actions",
+          "CI/CD"
+        ]
+      },
+      {
+        "group": "Observabilidad y calidad",
+        "items": [
+          "Prometheus",
+          "Grafana",
+          "Pruebas de carga",
+          "Tests unitarios y E2E",
+          "Revisión de código"
+        ]
+      },
+      {
+        "group": "IA",
+        "items": [
+          "Integración de LLM (Google Gemini)",
+          "Diseño de capas de contexto"
+        ]
+      }
     ]
   },
   "contact": {

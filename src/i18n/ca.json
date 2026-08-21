@@ -1,8 +1,8 @@
 {
   "lang": "ca",
   "meta": {
-    "title": "Aleix Casas — Enginyer de programari",
-    "description": "Enginyer de programari a Barcelona. Construeixo i opero sistemes de backend que han d'aguantar: Python/Django sobre PostgreSQL, IA generativa en producció i Kubernetes sobre GCP."
+    "title": "Aleix Casas — Enginyer de software",
+    "description": "Enginyer de software a Barcelona. Construeixo i opero sistemes de backend que han d'aguantar: Python/Django sobre PostgreSQL, IA generativa en producció i Kubernetes sobre GCP."
   },
   "nav": {
     "about": "Sobre mi",
@@ -17,12 +17,13 @@
     "language": "Idioma",
     "skip": "Anar al contingut",
     "home": "Aleix Casas — inici",
-    "top": "Tornar a dalt"
+    "top": "Tornar a dalt",
+    "cvFile": "/CV_Aleix_Casas_CA.pdf"
   },
   "hero": {
     "location": "Barcelona, Catalunya",
-    "role": "Enginyer de programari · Backend i plataforma",
-    "intro": "Construeixo i opero sistemes que han d'aguantar. Tres anys a l'equip de producte d'una plataforma SaaS d'analítica: APIs REST en Django sobre PostgreSQL amb desenes de milions de registres, IA generativa en producció i serveis corrent sobre Kubernetes. Màster en Desenvolupament i Arquitectura de Programari, La Salle (URL), 2026.",
+    "role": "Enginyer de software · Backend i plataforma",
+    "intro": "Construeixo i opero sistemes que han d'aguantar. Tres anys a l'equip de producte d'una plataforma SaaS d'analítica: APIs REST en Django sobre PostgreSQL amb desenes de milions de registres, IA generativa en producció i serveis corrent sobre Kubernetes. Màster en Desenvolupament i Arquitectura de Software, La Salle (URL), 2026.",
     "cta": "Veure la meva feina"
   },
   "about": {
@@ -31,7 +32,7 @@
     "paragraphs": [
       "Treballo en un equip de tres, i això vol dir que sóc responsable del que entrego: les decisions de disseny, l'entrega i les conseqüències. Vaig aprendre aviat que la part interessant d'una funcionalitat poques vegades és el codi, sinó el model de dades que hi ha a sota i què passa quan aquest volum creix.",
       "La major part del meu temps va al backend i a les dades: APIs REST en Django, PostgreSQL, plans de consulta, índexs i treure del camí crític tot el que pesa. Darrerament l'he dedicat a les parts que només apareixen sota càrrega —pooling de connexions, backpressure, autoescalat que faci el que et penses que fa— i a aconseguir que un model de llenguatge faci alguna cosa realment útil dins d'un producte.",
-      "Acabo de finalitzar el Màster en Desenvolupament i Arquitectura de Programari a La Salle (URL). M'interessen els sistemes que han d'aguantar: disseny de dades, rendiment i decisions que continuïn tenint sentit d'aquí a dos anys."
+      "Acabo de finalitzar el Màster en Desenvolupament i Arquitectura de Software a La Salle (URL). M'interessen els sistemes que han d'aguantar: disseny de dades, rendiment i decisions que continuïn tenint sentit d'aquí a dos anys."
     ]
   },
   "experience": {
@@ -39,7 +40,7 @@
     "title": "Experiència",
     "jobs": [
       {
-        "role": "Enginyer de programari full stack",
+        "role": "Enginyer de software full stack",
         "company": "IdenCity",
         "location": "Barcelona",
         "period": "Juny 2023 — Actualitat",
@@ -61,18 +62,29 @@
     "items": [
       {
         "name": "Vista Flota",
-        "tagline": "De 80 a 5.000 esdeveniments per segon",
+        "tagline": "De 80 a 5.000 events per segon",
         "year": "2026",
         "context": "Treball final de màster · La Salle URL",
         "image": "/img/projects/vista-flota.png",
         "imageAlt": "Diagrama d'arquitectura general de la plataforma Vista Flota sobre Google Cloud",
-        "summary": "Una plataforma IoT de flotes en temps real: un dispositiu embarcat a cada camió publica telemetria per MQTT —posició, velocitat, combustible— que la plataforma ingereix, dedupica i converteix en estat de flota en viu, viatges i alertes sobre un panell d'operador, arxivant tot l'històric per reconstruir rutes.",
+        "summary": "Una plataforma IoT de flotes en temps real: un dispositiu embarcat a cada camió publica telemetria per MQTT —posició, velocitat, combustible— que la plataforma ingereix, deduplica i converteix en estat de flota en viu, viatges i alertes sobre un panell d'operador, arxivant tot l'històric per reconstruir rutes.",
         "highlights": [
-          "El requisit era 1.000 esdeveniments/s sostinguts amb zero pèrdua de missatges. L'arquitectura de partida moria per OOM als 80.",
-          "Vaig treure els colls d'ampolla un a un —mesurar, diagnosticar, corregir, revalidar— amb Prometheus i Grafana: la deduplicació va sortir de PostgreSQL cap a Redis, PgBouncer multiplexant 200 connexions de client sobre 20 de reals, backpressure per marques d'aigua, MQTT amb QoS 1, i KEDA substituït per HPA quan el profiling va demostrar que els pods eren CPU-bound.",
-          "Resultat final: 5.000 esdeveniments/s en pic, 3.200 sostinguts, 0,00 % de pèrdua."
+          "El requisit era 1.000 events/s sostinguts amb zero pèrdua de missatges. L'arquitectura de partida moria per OOM als 80.",
+          "Vaig treure els colls d'ampolla un a un —mesurar, diagnosticar, corregir, revalidar— amb Prometheus i Grafana: la deduplicació va sortir de PostgreSQL cap a Redis, PgBouncer multiplexant 200 connexions de client sobre 20 de reals, backpressure per watermarks, MQTT amb QoS 1, i KEDA substituït per HPA quan el profiling va demostrar que els pods eren CPU-bound.",
+          "Resultat final: 5.000 events/s en pic, 3.200 sostinguts, 0,00 % de pèrdua."
         ],
-        "stack": ["TypeScript", "Kubernetes (GKE)", "Terraform", "MQTT / EMQX", "PostgreSQL", "Redis", "BigQuery", "Prometheus", "Grafana", "Angular"],
+        "stack": [
+          "TypeScript",
+          "Kubernetes (GKE)",
+          "Terraform",
+          "MQTT / EMQX",
+          "PostgreSQL",
+          "Redis",
+          "BigQuery",
+          "Prometheus",
+          "Grafana",
+          "Angular"
+        ],
         "note": "Projecte d'equip dividit en tres àrees (Aplicació, Infraestructura, IoT). Jo vaig portar l'àrea d'Aplicació. El repositori és privat."
       },
       {
@@ -88,7 +100,12 @@
           "Vaig construir la capa que reuneix i estructura tot el context de dades de la plataforma i crida Google Gemini per produir l'informe.",
           "El que abans havia de redactar l'usuari a mà ara es genera en segons."
         ],
-        "stack": ["Python", "Django", "Google Gemini", "PostgreSQL"],
+        "stack": [
+          "Python",
+          "Django",
+          "Google Gemini",
+          "PostgreSQL"
+        ],
         "note": "Producte propietari: sense repositori públic."
       },
       {
@@ -104,7 +121,11 @@
           "Va obligar a refer l'autenticació des de zero perquè funcionés sota un domini que no controlem.",
           "En producció."
         ],
-        "stack": ["Angular", "TypeScript", "Django"],
+        "stack": [
+          "Angular",
+          "TypeScript",
+          "Django"
+        ],
         "note": "Producte propietari: sense repositori públic."
       }
     ]
@@ -113,13 +134,72 @@
     "kicker": "Amb què treballo",
     "title": "Tecnologies",
     "groups": [
-      { "group": "Llenguatges", "items": ["Python", "TypeScript", "JavaScript", "SQL"] },
-      { "group": "Backend", "items": ["Django", "Django REST Framework", "Celery", "Node.js", "Disseny d'APIs REST"] },
-      { "group": "Frontend", "items": ["Angular", "React", "Tailwind CSS", "Astro"] },
-      { "group": "Dades", "items": ["PostgreSQL", "Redis", "BigQuery", "Modelatge de dades", "Optimització de consultes"] },
-      { "group": "Infraestructura", "items": ["Kubernetes", "Terraform", "Docker", "Google Cloud", "GitHub Actions", "CI/CD"] },
-      { "group": "Observabilitat i qualitat", "items": ["Prometheus", "Grafana", "Proves de càrrega", "Tests unitaris i E2E", "Revisió de codi"] },
-      { "group": "IA", "items": ["Integració de LLM (Google Gemini)", "Disseny de capes de context"] }
+      {
+        "group": "Llenguatges",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "SQL"
+        ]
+      },
+      {
+        "group": "Backend",
+        "items": [
+          "Django",
+          "Django REST Framework",
+          "Celery",
+          "Node.js",
+          "REST API design"
+        ]
+      },
+      {
+        "group": "Frontend",
+        "items": [
+          "Angular",
+          "React",
+          "Tailwind CSS",
+          "Astro"
+        ]
+      },
+      {
+        "group": "Dades",
+        "items": [
+          "PostgreSQL",
+          "Redis",
+          "BigQuery",
+          "Data modeling",
+          "Query optimisation"
+        ]
+      },
+      {
+        "group": "Infraestructura",
+        "items": [
+          "Kubernetes",
+          "Terraform",
+          "Docker",
+          "Google Cloud",
+          "GitHub Actions",
+          "CI/CD"
+        ]
+      },
+      {
+        "group": "Observabilitat i qualitat",
+        "items": [
+          "Prometheus",
+          "Grafana",
+          "Load testing",
+          "Unit & E2E testing",
+          "Code review"
+        ]
+      },
+      {
+        "group": "IA",
+        "items": [
+          "LLM integration (Google Gemini)",
+          "Context layer design"
+        ]
+      }
     ]
   },
   "contact": {
