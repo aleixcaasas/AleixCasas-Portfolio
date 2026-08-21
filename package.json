@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "aleixcasas-portfolio",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -8,21 +8,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "gh-pages -d dist"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.16.8",
-    "particlesjs": "^2.2.3",
-    "swiper": "^9.0.5",
-    "vite": "^4.1.1"
+    "astro": "^5.16.8"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.2",
-    "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.6"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
