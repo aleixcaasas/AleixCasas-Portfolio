@@ -14,7 +14,7 @@ const { t } = Astro.props;
         <article class="overflow-hidden rounded-lg border border-zinc-200 bg-white transition-shadow hover:shadow-lg dark:border-zinc-800 dark:bg-[#151A21]">
           {p.image && (
             <img
-              class="aspect-[16/9] w-full border-b border-zinc-200 bg-zinc-50 object-contain p-3 dark:border-zinc-800 dark:bg-zinc-900"
+              class="aspect-[16/9] w-full border-b border-zinc-200 bg-zinc-50 object-cover object-top dark:border-zinc-800 dark:bg-zinc-900"
               src={p.image}
               alt={p.imageAlt}
               loading="lazy"
@@ -42,6 +42,29 @@ const { t } = Astro.props;
                 <li class="rounded border border-zinc-200 bg-zinc-50 px-2 py-1 font-mono text-xs text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">{s}</li>
               ))}
             </ul>
+
+            {p.gallery && (
+              <ul class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {p.gallery.map((g) => (
+                  <li class="flex flex-col gap-2">
+                    <a
+                      href={g.src}
+                      target="_blank"
+                      rel="noopener"
+                      class="group block overflow-hidden rounded-md border border-zinc-200 bg-zinc-50 transition-colors hover:border-accent dark:border-zinc-700 dark:bg-zinc-900"
+                    >
+                      <img
+                        class="aspect-[16/10] w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+                        src={g.src}
+                        alt={g.alt}
+                        loading="lazy"
+                      />
+                    </a>
+                    <p class="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">{g.caption}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {p.note && (
               <p class="border-t border-zinc-100 pt-4 text-sm italic text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">{p.note}</p>

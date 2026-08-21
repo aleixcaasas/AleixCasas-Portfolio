@@ -65,8 +65,8 @@
         "tagline": "From 80 to 5,000 events per second",
         "year": "2026",
         "context": "Master's thesis · La Salle URL",
-        "image": "/img/projects/vista-flota.png",
-        "imageAlt": "High-level architecture diagram of the Vista Flota platform on Google Cloud",
+        "image": "/img/projects/vista-flota-dashboard.jpg",
+        "imageAlt": "Vista Flota operator dashboard showing 2,500 trucks on a live map with fleet KPIs",
         "summary": "A real-time IoT fleet platform: a device on each truck publishes telemetry over MQTT — position, speed, fuel — which the platform ingests, deduplicates and turns into live fleet state, trips and alerts on an operator dashboard, archiving the full history for route reconstruction.",
         "highlights": [
           "The requirement was 1,000 events/s sustained with zero message loss. The baseline architecture died of OOM at 80.",
@@ -85,7 +85,24 @@
           "Grafana",
           "Angular"
         ],
-        "note": "Team project across three areas (Application, Infrastructure, IoT). I owned the Application area. Repository is private."
+        "note": "Team project across three areas (Application, Infrastructure, IoT). I owned the Application area. Repository is private.",
+        "gallery": [
+          {
+            "src": "/img/projects/vista-flota-architecture.png",
+            "alt": "High-level architecture diagram: onboard agent and simulator publish to an event bus, an event processor writes to real-time state, fleet data and historical telemetry, and a query API serves the operator dashboard",
+            "caption": "Architecture: MQTT ingestion, event processor, polyglot persistence and the query API behind the dashboard."
+          },
+          {
+            "src": "/img/projects/vista-flota-monitoring.jpg",
+            "alt": "Grafana dashboards embedded in the app: MQTT pipeline throughput, processor replicas, in-memory queue depth and processing latency percentiles",
+            "caption": "The observability that made the tuning possible: published vs received vs processed, queue depth per pod and p50/p95/p99 latency."
+          },
+          {
+            "src": "/img/projects/vista-flota-trip.jpg",
+            "alt": "Trip detail view replaying a completed route on a map with distance, duration and average fuel consumption",
+            "caption": "Trip replay reconstructed from the historical telemetry archive."
+          }
+        ]
       },
       {
         "name": "AI report generation",

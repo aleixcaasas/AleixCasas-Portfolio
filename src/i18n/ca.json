@@ -65,8 +65,8 @@
         "tagline": "De 80 a 5.000 events per segon",
         "year": "2026",
         "context": "Treball final de màster · La Salle URL",
-        "image": "/img/projects/vista-flota.png",
-        "imageAlt": "Diagrama d'arquitectura general de la plataforma Vista Flota sobre Google Cloud",
+        "image": "/img/projects/vista-flota-dashboard.jpg",
+        "imageAlt": "Panell d'operador de Vista Flota amb 2.500 camions sobre un mapa en viu i els KPIs de la flota",
         "summary": "Una plataforma IoT de flotes en temps real: un dispositiu embarcat a cada camió publica telemetria per MQTT —posició, velocitat, combustible— que la plataforma ingereix, deduplica i converteix en estat de flota en viu, viatges i alertes sobre un panell d'operador, arxivant tot l'històric per reconstruir rutes.",
         "highlights": [
           "El requisit era 1.000 events/s sostinguts amb zero pèrdua de missatges. L'arquitectura de partida moria per OOM als 80.",
@@ -85,7 +85,24 @@
           "Grafana",
           "Angular"
         ],
-        "note": "Projecte d'equip dividit en tres àrees (Aplicació, Infraestructura, IoT). Jo vaig portar l'àrea d'Aplicació. El repositori és privat."
+        "note": "Projecte d'equip dividit en tres àrees (Aplicació, Infraestructura, IoT). Jo vaig portar l'àrea d'Aplicació. El repositori és privat.",
+        "gallery": [
+          {
+            "src": "/img/projects/vista-flota-architecture.png",
+            "alt": "Diagrama d'arquitectura general: l'agent embarcat i el simulador publiquen a un bus d'events, un processador d'events escriu a l'estat en temps real, les dades de flota i la telemetria històrica, i una API de consulta alimenta el panell d'operador",
+            "caption": "Arquitectura: ingesta MQTT, processador d'events, persistència poliglota i l'API de consulta darrere del panell."
+          },
+          {
+            "src": "/img/projects/vista-flota-monitoring.jpg",
+            "alt": "Dashboards de Grafana integrats a l'aplicació: throughput del pipeline MQTT, rèpliques del processador, profunditat de la cua en memòria i percentils de latència",
+            "caption": "L'observabilitat que va fer possible el tuning: publicat vs rebut vs processat, queue depth per pod i latència p50/p95/p99."
+          },
+          {
+            "src": "/img/projects/vista-flota-trip.jpg",
+            "alt": "Detall d'un viatge reproduint una ruta completada sobre el mapa amb distància, durada i consum mitjà",
+            "caption": "Reproducció d'una ruta reconstruïda a partir de l'arxiu històric de telemetria."
+          }
+        ]
       },
       {
         "name": "Generació d'informes amb IA",

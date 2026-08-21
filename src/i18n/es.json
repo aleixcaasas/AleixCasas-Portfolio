@@ -65,8 +65,8 @@
         "tagline": "De 80 a 5.000 eventos por segundo",
         "year": "2026",
         "context": "Trabajo final de máster · La Salle URL",
-        "image": "/img/projects/vista-flota.png",
-        "imageAlt": "Diagrama de arquitectura general de la plataforma Vista Flota sobre Google Cloud",
+        "image": "/img/projects/vista-flota-dashboard.jpg",
+        "imageAlt": "Panel de operador de Vista Flota con 2.500 camiones sobre un mapa en vivo y los KPIs de la flota",
         "summary": "Una plataforma IoT de flotas en tiempo real: un dispositivo embarcado en cada camión publica telemetría por MQTT —posición, velocidad, combustible— que la plataforma ingiere, deduplica y convierte en estado de flota en vivo, viajes y alertas sobre un panel de operador, archivando todo el histórico para reconstruir rutas.",
         "highlights": [
           "El requisito era 1.000 eventos/s sostenidos con cero pérdida de mensajes. La arquitectura de partida moría por OOM a los 80.",
@@ -85,7 +85,24 @@
           "Grafana",
           "Angular"
         ],
-        "note": "Proyecto de equipo dividido en tres áreas (Aplicación, Infraestructura, IoT). Yo llevé el área de Aplicación. El repositorio es privado."
+        "note": "Proyecto de equipo dividido en tres áreas (Aplicación, Infraestructura, IoT). Yo llevé el área de Aplicación. El repositorio es privado.",
+        "gallery": [
+          {
+            "src": "/img/projects/vista-flota-architecture.png",
+            "alt": "Diagrama de arquitectura general: el agente embarcado y el simulador publican en un bus de eventos, un procesador de eventos escribe en el estado en tiempo real, los datos de flota y la telemetría histórica, y una API de consulta alimenta el panel de operador",
+            "caption": "Arquitectura: ingesta MQTT, procesador de eventos, persistencia políglota y la API de consulta detrás del panel."
+          },
+          {
+            "src": "/img/projects/vista-flota-monitoring.jpg",
+            "alt": "Dashboards de Grafana integrados en la aplicación: throughput del pipeline MQTT, réplicas del procesador, profundidad de la cola en memoria y percentiles de latencia",
+            "caption": "La observabilidad que hizo posible el tuning: publicado vs recibido vs procesado, profundidad de cola por pod y latencia p50/p95/p99."
+          },
+          {
+            "src": "/img/projects/vista-flota-trip.jpg",
+            "alt": "Detalle de un viaje reproduciendo una ruta completada sobre el mapa con distancia, duración y consumo medio",
+            "caption": "Reproducción de una ruta reconstruida a partir del archivo histórico de telemetría."
+          }
+        ]
       },
       {
         "name": "Generación de informes con IA",
