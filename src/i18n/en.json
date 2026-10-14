@@ -23,7 +23,7 @@
   "hero": {
     "location": "Barcelona, Spain",
     "role": "Full Stack Software Engineer",
-    "intro": "I build and operate systems that have to hold up. Three years in the product team of a SaaS analytics platform: Django REST APIs over PostgreSQL holding tens of millions of records, generative AI shipped to production, and services running on Kubernetes. MSc in Software Development & Architecture, La Salle (URL), 2026.",
+    "intro": "I build and operate systems that have to hold up. Three years in the product team of a SaaS analytics platform: Django REST APIs over PostgreSQL holding tens of millions of records, an embeddable widget platform and an AI feature with its cost under control, both in production. MSc in Software Development & Architecture, La Salle (URL), 2026, where I took a Kubernetes event pipeline from 80 to 5,000 events per second.",
     "cta": "See my work"
   },
   "about": {
@@ -46,9 +46,9 @@
         "period": "June 2023 — Present",
         "summary": "IDDIGO, a SaaS urban analytics platform tracking over 1,000 performance indicators for cities and territories. I work in a product team of three engineers, which means owning what I ship end to end.",
         "points": [
-          "Built the platform's AI report generation from scratch: the layer that gathers and structures the full data context, plus the call to Google Gemini. What users previously wrote by hand now takes seconds.",
-          "Converted the Angular application into a component embeddable in third-party websites, which required a new authentication system. Live in production.",
-          "Migrated the frontend from imperative to reactive Angular (signal-based state, modern syntax) and built the testing system from zero on a codebase that had none.",
+          "Designed the embeddable widget platform: any feature of the Angular app can be configured and embedded in client websites, with a single entry point, route guards, its own JWT authentication and a per-client Content Security Policy enforced at the Nginx layer. Live in production.",
+          "Led the AI diagnosis project on Google Gemini from proposal to production and delivered the MVP in one month: structured context, asynchronous generation with Celery, per-institution quotas and a daily spend limit, and versioned reports with user ratings.",
+          "Migrated the frontend to Angular 20 and signal-based state in a 650-file change that removed over 5,000 lines net, and rebuilt frontend testing from scratch with Vitest and Playwright.",
           "Django REST APIs over PostgreSQL holding tens of millions of records; cut the heaviest endpoints from several seconds to under one through query and index optimisation.",
           "Mentored two junior developers through code review, pairing and technical growth plans."
         ]
@@ -105,43 +105,50 @@
         ]
       },
       {
-        "name": "AI report generation",
-        "tagline": "Hours of manual writing, down to seconds",
-        "year": "2026",
+        "name": "Embeddable widget platform",
+        "tagline": "Any feature of the product, inside someone else's website",
+        "year": "2025–2026",
         "context": "IDDIGO · IdenCity",
         "image": null,
         "imageAlt": null,
-        "summary": "IDDIGO tracks over 1,000 indicators per territory, but reading them and turning them into a written analysis was manual work for the client. I designed and built from scratch the feature that does it automatically.",
+        "summary": "Clients wanted parts of IDDIGO inside their own websites. Rather than a one-off embed, I treated it as an architecture problem: how to let any feature of the Angular application be shared as a widget, configured for each client, and kept closed off from the rest of the product.",
         "highlights": [
-          "The interesting part isn't the API call — it's deciding what context goes into the prompt and what stays out, and keeping that decision cheap and bounded as the indicator catalogue grows.",
-          "Built the layer that gathers and structures the platform's full data context, then calls Google Gemini to produce the report.",
-          "What users previously had to write by hand is now generated in seconds."
-        ],
-        "stack": [
-          "Python",
-          "Django",
-          "Google Gemini",
-          "PostgreSQL"
-        ],
-        "note": "Proprietary product — no public repository."
-      },
-      {
-        "name": "Embeddable widget",
-        "tagline": "The same product, running inside someone else's site",
-        "year": "2026",
-        "context": "IDDIGO · IdenCity",
-        "image": null,
-        "imageAlt": null,
-        "summary": "A business constraint — clients wanted IDDIGO inside their own websites — that turned into an architecture problem: how do you embed a full application in a third-party domain without duplicating the product?",
-        "highlights": [
-          "Converted the Angular application into a component embeddable in third-party sites.",
-          "Required rebuilding authentication from the ground up to work under a domain we don't control.",
-          "Live in production."
+          "A single entry point loads each widget's configuration from its ID, and route guards keep visitors inside the functionality that widget allows.",
+          "Widget visitors aren't platform users, so they get their own JWT authentication with proactive token refresh, running alongside the platform's existing authentication.",
+          "Embedding is limited to each client's allowed domains: Nginx asks the backend for each widget's allowed origins and builds the Content Security Policy from them. Violations are logged and reported to Sentry.",
+          "Later extended with territory pages configurable per widget and custom typography per client. Live in production."
         ],
         "stack": [
           "Angular",
           "TypeScript",
-          "Django"
+          "Django",
+          "JWT",
+          "Nginx"
+        ],
+        "note": "Proprietary product — no public repository."
+      },
+      {
+        "name": "AI diagnosis with Gemini",
+        "tagline": "A written analysis of every indicator, with the cost under control",
+        "year": "2026",
+        "context": "IDDIGO · IdenCity",
+        "image": null,
+        "imageAlt": null,
+        "summary": "IDDIGO tracks over 1,000 indicators per territory, but interpreting the tables and charts took time and technical knowledge. I led the project as owner, from proposal to production, and delivered the MVP in one month: a tab on every indicator page that writes an analysis of trends, anomalies and territorial comparisons.",
+        "highlights": [
+          "The context sent to Gemini is built in five blocks (territory, indicator metadata, historical series, breakdowns and comparable territories) by a pure function with its own tests.",
+          "Generation runs asynchronously in Celery, with a global daily spend limit and a daily quota per institution. Cache hits don't count against the quota.",
+          "Reports are cached for 30 days and only reused while the underlying data hasn't changed. Regenerating creates a new version, so every user rating stays tied to the exact text that was read, and the token usage of each call is recorded.",
+          "The model's output is treated as untrusted: rendered as Markdown through Angular's sanitizer in the app, and with its HTML escaped in the PDF export."
+        ],
+        "stack": [
+          "Python",
+          "Django",
+          "Celery",
+          "Google Gemini",
+          "PostgreSQL",
+          "Redis",
+          "Angular"
         ],
         "note": "Proprietary product — no public repository."
       }
@@ -197,7 +204,8 @@
           "Docker",
           "Google Cloud",
           "GitHub Actions",
-          "CI/CD"
+          "CI/CD",
+          "Nginx"
         ]
       },
       {
@@ -207,14 +215,18 @@
           "Grafana",
           "Load testing",
           "Unit & E2E testing",
-          "Code review"
+          "Code review",
+          "Sentry",
+          "Vitest",
+          "Playwright"
         ]
       },
       {
         "group": "AI",
         "items": [
           "LLM integration (Google Gemini)",
-          "Context layer design"
+          "Context layer design",
+          "Cost controls (quotas, spend limits, caching)"
         ]
       }
     ]
@@ -222,7 +234,7 @@
   "contact": {
     "kicker": "Get in touch",
     "title": "Contact",
-    "intro": "Open to backend and platform roles in Barcelona. Happy to talk about a role, a system you're building, or anything on this page.",
+    "intro": "Open to full stack, backend and platform roles in Barcelona. Happy to talk about a role, a system you're building, or anything on this page.",
     "name": "Name",
     "email": "Email",
     "message": "Message",

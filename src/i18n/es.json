@@ -23,7 +23,7 @@
   "hero": {
     "location": "Barcelona, España",
     "role": "Ingeniero de software full stack",
-    "intro": "Construyo y opero sistemas que tienen que aguantar. Tres años en el equipo de producto de una plataforma SaaS de analítica: APIs REST en Django sobre PostgreSQL con decenas de millones de registros, IA generativa en producción y servicios corriendo sobre Kubernetes. Máster en Desarrollo y Arquitectura de Software, La Salle (URL), 2026.",
+    "intro": "Construyo y opero sistemas que tienen que aguantar. Tres años en el equipo de producto de una plataforma SaaS de analítica: APIs REST en Django sobre PostgreSQL con decenas de millones de registros, una plataforma de widgets incrustables y una funcionalidad de IA con el coste bajo control, ambas en producción. Máster en Desarrollo y Arquitectura de Software, La Salle (URL), 2026, donde llevé un pipeline de eventos sobre Kubernetes de 80 a 5.000 eventos por segundo.",
     "cta": "Ver mi trabajo"
   },
   "about": {
@@ -46,9 +46,9 @@
         "period": "Junio 2023 — Actualidad",
         "summary": "IDDIGO, una plataforma SaaS de analítica urbana con más de 1.000 indicadores de desempeño de ciudades y territorios. Trabajo en un equipo de producto de tres personas, lo que significa hacerme cargo de lo que entrego de principio a fin.",
         "points": [
-          "Construí desde cero la generación de informes con IA de la plataforma: la capa que reúne y estructura todo el contexto de datos, más la llamada a Google Gemini. Lo que antes redactaba el usuario a mano ahora sale en segundos.",
-          "Convertí la aplicación Angular en un componente incrustable en webs de terceros, lo que exigió un nuevo sistema de autenticación. En producción.",
-          "Migré el frontend de Angular imperativo a reactivo (estado con signals y sintaxis moderna) y monté el sistema de testing desde cero sobre un código que no tenía ninguna prueba.",
+          "Diseñé la plataforma de widgets incrustables: cualquier funcionalidad de la app Angular se puede configurar e incrustar en las webs de los clientes, con un único punto de entrada, guards de rutas, autenticación JWT propia y una Content Security Policy por cliente validada en Nginx. En producción.",
+          "Lideré el proyecto de diagnóstico con IA sobre Google Gemini de la propuesta a producción y entregué el MVP en un mes: contexto estructurado, generación asíncrona con Celery, cuotas por institución y límite de gasto diario, e informes versionados con valoraciones de los usuarios.",
+          "Migré el frontend a Angular 20 y a estado con signals en un cambio de 650 ficheros que eliminó más de 5.000 líneas netas, y rehíce desde cero el testing del frontend con Vitest y Playwright.",
           "APIs REST en Django sobre PostgreSQL con decenas de millones de registros; reduje los endpoints más pesados de varios segundos a menos de uno optimizando consultas e índices.",
           "Mentoricé a dos desarrolladores junior con revisiones de código, pairing y planes de crecimiento técnico."
         ]
@@ -105,43 +105,50 @@
         ]
       },
       {
-        "name": "Generación de informes con IA",
-        "tagline": "Horas de redacción manual, reducidas a segundos",
-        "year": "2026",
+        "name": "Plataforma de widgets incrustables",
+        "tagline": "Cualquier funcionalidad del producto, dentro de la web de otro",
+        "year": "2025–2026",
         "context": "IDDIGO · IdenCity",
         "image": null,
         "imageAlt": null,
-        "summary": "IDDIGO recoge más de 1.000 indicadores por territorio, pero leerlos y convertirlos en un análisis escrito era trabajo manual del cliente. Diseñé y construí desde cero la funcionalidad que lo hace de forma automática.",
+        "summary": "Los clientes querían partes de IDDIGO dentro de sus propias webs. En lugar de un incrustado puntual, lo traté como un problema de arquitectura: cómo permitir que cualquier funcionalidad de la aplicación Angular se comparta como widget, se configure para cada cliente y quede cerrada al resto del producto.",
         "highlights": [
-          "Lo interesante no es la llamada a la API, sino decidir qué contexto entra en el prompt y qué se queda fuera, y que esa decisión siga siendo barata y acotada a medida que crece el catálogo de indicadores.",
-          "Construí la capa que reúne y estructura todo el contexto de datos de la plataforma y llama a Google Gemini para producir el informe.",
-          "Lo que antes tenía que redactar el usuario a mano ahora se genera en segundos."
-        ],
-        "stack": [
-          "Python",
-          "Django",
-          "Google Gemini",
-          "PostgreSQL"
-        ],
-        "note": "Producto propietario: sin repositorio público."
-      },
-      {
-        "name": "Widget incrustable",
-        "tagline": "El mismo producto, corriendo dentro de la web de otro",
-        "year": "2026",
-        "context": "IDDIGO · IdenCity",
-        "image": null,
-        "imageAlt": null,
-        "summary": "Una restricción de negocio —los clientes querían IDDIGO dentro de sus propias webs— que se convirtió en un problema de arquitectura: cómo incrustas una aplicación entera en un dominio ajeno sin duplicar el producto.",
-        "highlights": [
-          "Convertí la aplicación Angular en un componente incrustable en webs de terceros.",
-          "Obligó a rehacer la autenticación desde cero para que funcionara bajo un dominio que no controlamos.",
-          "En producción."
+          "Un único punto de entrada carga la configuración de cada widget a partir de su identificador, y los guards de rutas mantienen al visitante dentro de la funcionalidad que ese widget permite.",
+          "Los visitantes del widget no son usuarios de la plataforma, así que tienen su propia autenticación JWT con renovación proactiva del token, que convive con la autenticación existente.",
+          "La incrustación se limita a los dominios autorizados de cada cliente: Nginx pide al backend los orígenes permitidos de cada widget y construye con ellos la Content Security Policy. Las violaciones se registran y se notifican a Sentry.",
+          "Después la amplié con fichas territoriales configurables por widget y tipografía propia por cliente. En producción."
         ],
         "stack": [
           "Angular",
           "TypeScript",
-          "Django"
+          "Django",
+          "JWT",
+          "Nginx"
+        ],
+        "note": "Producto propietario: sin repositorio público."
+      },
+      {
+        "name": "Diagnóstico con IA sobre Gemini",
+        "tagline": "Un análisis escrito de cada indicador, con el coste bajo control",
+        "year": "2026",
+        "context": "IDDIGO · IdenCity",
+        "image": null,
+        "imageAlt": null,
+        "summary": "IDDIGO recoge más de 1.000 indicadores por territorio, pero interpretar sus tablas y gráficos requería tiempo y conocimientos técnicos. Lideré el proyecto como responsable, de la propuesta a producción, y entregué el MVP en un mes: una pestaña en cada ficha de indicador que redacta un análisis de tendencias, anomalías y comparativas territoriales.",
+        "highlights": [
+          "El contexto que recibe Gemini se construye en cinco bloques (territorio, metadatos del indicador, serie histórica, desagregados y territorios comparables) con una función pura que tiene sus propios tests.",
+          "La generación es asíncrona en Celery, con un límite global de gasto diario y una cuota diaria por institución. Los aciertos de caché no consumen cuota.",
+          "Los informes se cachean 30 días y solo se reutilizan mientras los datos de origen no cambien. Regenerar crea una versión nueva, así que cada valoración queda ligada al texto exacto que se leyó, y se registra el consumo de tokens de cada llamada.",
+          "La respuesta del modelo se trata como no fiable: se renderiza como Markdown con el sanitizador de Angular y con el HTML escapado en la exportación a PDF."
+        ],
+        "stack": [
+          "Python",
+          "Django",
+          "Celery",
+          "Google Gemini",
+          "PostgreSQL",
+          "Redis",
+          "Angular"
         ],
         "note": "Producto propietario: sin repositorio público."
       }
@@ -197,7 +204,8 @@
           "Docker",
           "Google Cloud",
           "GitHub Actions",
-          "CI/CD"
+          "CI/CD",
+          "Nginx"
         ]
       },
       {
@@ -207,14 +215,18 @@
           "Grafana",
           "Pruebas de carga",
           "Tests unitarios y E2E",
-          "Revisión de código"
+          "Revisión de código",
+          "Sentry",
+          "Vitest",
+          "Playwright"
         ]
       },
       {
         "group": "IA",
         "items": [
           "Integración de LLM (Google Gemini)",
-          "Diseño de capas de contexto"
+          "Diseño de capas de contexto",
+          "Control de costes (cuotas, límites de gasto, caché)"
         ]
       }
     ]
@@ -222,7 +234,7 @@
   "contact": {
     "kicker": "Hablemos",
     "title": "Contacto",
-    "intro": "Abierto a posiciones de backend y plataforma en Barcelona. Encantado de hablar sobre una oferta, sobre un sistema que estés construyendo o sobre cualquier cosa de esta página.",
+    "intro": "Abierto a puestos full stack, de backend y de plataforma en Barcelona. Encantado de hablar de un puesto, de un sistema que estés construyendo o de cualquier cosa de esta página.",
     "name": "Nombre",
     "email": "Correo electrónico",
     "message": "Mensaje",
