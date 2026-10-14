@@ -23,16 +23,17 @@
   "hero": {
     "location": "Barcelona, Spain",
     "role": "Full Stack Software Engineer",
-    "intro": "Full stack engineer with three years on the product team of a SaaS analytics platform. I build Django REST APIs over PostgreSQL with tens of millions of records, and I've shipped an embeddable widget platform and an AI feature with controlled costs, both in production. MSc in Software Development & Architecture, La Salle (URL), 2026, where I took a Kubernetes event pipeline from 80 to 5,000 events per second.",
+    "intro": "Full stack engineer who builds product end to end: from understanding what the user needs and designing the architecture, to building, testing and running it, with AI agents at every step. Three years on the product team of a SaaS analytics platform, where I've shipped an embeddable widget platform and an AI feature with controlled costs. MSc in Software Development & Architecture, La Salle (URL), 2026.",
     "cta": "See my work"
   },
   "about": {
     "kicker": "A bit of context",
     "title": "About me",
     "paragraphs": [
-      "I work in a team of three, so what I build is mine from start to finish: the design, the delivery and whatever happens once it's in production. Working like that, I've learned to start with the data model, because that's usually where problems show up when the data grows.",
-      "Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes, and moving slow work out of the request. The rest is frontend, mostly Angular. I migrated our app to Angular 20 and signals. Lately I've also worked on things that only break under load, like connection pooling, backpressure and autoscaling, and on making an LLM useful inside a real product.",
-      "I've just finished an MSc in Software Development & Architecture at La Salle (URL). What I enjoy most is data design, performance, and making decisions that still make sense a couple of years later."
+      "I work in a team of three, so I take features from the idea to production: what the user needs, the architecture, the implementation, the tests and what happens once it's live. Architecture is where I start, because the decisions made at the beginning are the hardest to change later.",
+      "I build with AI agents at every step. I write the spec and the technical plan, split the work into tasks and let the agent do most of the implementation, while I review it and keep tests on what matters. With agents writing more of the code, I think the job is moving to understanding the problem and owning the outcome, and that's the part I enjoy most.",
+      "Day to day that means Django and PostgreSQL on the backend and Angular on the frontend. I've also mentored two junior developers through code review and pairing.",
+      "My MSc in Software Development & Architecture at La Salle (URL) changed the way I look at problems and their solutions. I now weigh the trade-offs of each option before choosing one, instead of going with the first one that works. In my final project I took a Kubernetes event pipeline from 80 to 5,000 events per second."
     ]
   },
   "experience": {

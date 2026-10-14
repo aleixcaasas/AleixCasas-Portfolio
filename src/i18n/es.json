@@ -23,16 +23,17 @@
   "hero": {
     "location": "Barcelona, España",
     "role": "Ingeniero de software full stack",
-    "intro": "Ingeniero full stack con tres años en el equipo de producto de una plataforma SaaS de analítica. Hago APIs REST en Django sobre PostgreSQL con decenas de millones de registros, y he sacado a producción una plataforma de widgets incrustables y una funcionalidad de IA con el coste controlado. Máster en Desarrollo y Arquitectura de Software, La Salle (URL), 2026, donde llevé un pipeline de eventos sobre Kubernetes de 80 a 5.000 eventos por segundo.",
+    "intro": "Ingeniero full stack que construye producto de principio a fin: desde entender lo que necesita el usuario y diseñar la arquitectura hasta construirlo, probarlo y mantenerlo en producción, con agentes de IA en cada paso. Tres años en el equipo de producto de una plataforma SaaS de analítica, donde he sacado a producción una plataforma de widgets incrustables y una funcionalidad de IA con el coste controlado. Máster en Desarrollo y Arquitectura de Software, La Salle (URL), 2026.",
     "cta": "Ver mi trabajo"
   },
   "about": {
     "kicker": "Un poco de contexto",
     "title": "Sobre mí",
     "paragraphs": [
-      "Trabajo en un equipo de tres, así que lo que hago es mío de principio a fin: el diseño, la entrega y lo que pase después en producción. Trabajando así he aprendido a empezar por el modelo de datos, porque es donde suelen aparecer los problemas cuando los datos crecen.",
-      "La mayor parte de mi tiempo va al backend y a los datos: APIs REST en Django, PostgreSQL, planes de consulta, índices y sacar de la petición lo que es lento. El resto es frontend, sobre todo Angular. Migré nuestra aplicación a Angular 20 y a signals. Últimamente también he trabajado en cosas que solo fallan bajo carga, como el pooling de conexiones, el backpressure o el autoescalado, y en conseguir que un LLM sea útil dentro de un producto real.",
-      "Acabo de terminar el Máster en Desarrollo y Arquitectura de Software en La Salle (URL). Lo que más me gusta es el diseño de datos, el rendimiento y tomar decisiones que sigan teniendo sentido un par de años después."
+      "Trabajo en un equipo de tres, así que llevo las funcionalidades desde la idea hasta producción: lo que necesita el usuario, la arquitectura, la implementación, los tests y lo que pasa una vez está en marcha. Empiezo por la arquitectura, porque las decisiones del principio son las más difíciles de cambiar después.",
+      "Construyo con agentes de IA en cada paso. Escribo la especificación y el plan técnico, divido el trabajo en tareas y dejo que el agente haga la mayor parte de la implementación, mientras yo la reviso y mantengo tests en lo importante. Con los agentes escribiendo cada vez más código, creo que el trabajo se mueve hacia entender el problema y responder del resultado, y esa es la parte que más me gusta.",
+      "En el día a día eso significa Django y PostgreSQL en el backend y Angular en el frontend. También he mentorizado a dos desarrolladores junior con revisiones de código y pairing.",
+      "El Máster en Desarrollo y Arquitectura de Software de La Salle (URL) cambió mi forma de ver los problemas y sus soluciones. Ahora sopeso los pros y contras de cada opción antes de elegir una, en lugar de quedarme con la primera que funciona. En el proyecto final llevé un pipeline de eventos sobre Kubernetes de 80 a 5.000 eventos por segundo."
     ]
   },
   "experience": {

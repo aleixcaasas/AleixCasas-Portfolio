@@ -23,16 +23,17 @@
   "hero": {
     "location": "Barcelona, Catalunya",
     "role": "Enginyer de software full stack",
-    "intro": "Enginyer full stack amb tres anys a l'equip de producte d'una plataforma SaaS d'analítica. Faig APIs REST en Django sobre PostgreSQL amb desenes de milions de registres, i he posat en producció una plataforma de widgets incrustables i una funcionalitat d'IA amb el cost controlat. Màster en Desenvolupament i Arquitectura de Software, La Salle (URL), 2026, on vaig portar un pipeline d'events sobre Kubernetes de 80 a 5.000 events per segon.",
+    "intro": "Enginyer full stack que construeix producte de principi a fi: des d'entendre el que necessita l'usuari i dissenyar l'arquitectura fins a construir-lo, provar-lo i mantenir-lo en producció, amb agents d'IA a cada pas. Tres anys a l'equip de producte d'una plataforma SaaS d'analítica, on he posat en producció una plataforma de widgets incrustables i una funcionalitat d'IA amb el cost controlat. Màster en Desenvolupament i Arquitectura de Software, La Salle (URL), 2026.",
     "cta": "Veure la meva feina"
   },
   "about": {
     "kicker": "Una mica de context",
     "title": "Sobre mi",
     "paragraphs": [
-      "Treballo en un equip de tres, així que el que faig és meu de principi a fi: el disseny, el lliurament i el que passi després a producció. Treballant així he après a començar pel model de dades, perquè és on solen aparèixer els problemes quan les dades creixen.",
-      "La major part del meu temps va al backend i a les dades: APIs REST en Django, PostgreSQL, plans de consulta, índexs i treure de la petició el que és lent. La resta és frontend, sobretot Angular. Vaig migrar la nostra aplicació a Angular 20 i a signals. Darrerament també he treballat en coses que només fallen sota càrrega, com el pooling de connexions, el backpressure o l'autoescalat, i en aconseguir que un LLM sigui útil dins d'un producte real.",
-      "Fa poc que he acabat el Màster en Desenvolupament i Arquitectura de Software a La Salle (URL). El que més m'agrada és el disseny de dades, el rendiment i prendre decisions que continuïn tenint sentit un parell d'anys després."
+      "Treballo en un equip de tres, així que porto les funcionalitats des de la idea fins a producció: el que necessita l'usuari, l'arquitectura, la implementació, els tests i el que passa un cop està en marxa. Començo per l'arquitectura, perquè les decisions del principi són les més difícils de canviar després.",
+      "Construeixo amb agents d'IA a cada pas. Escric l'especificació i el pla tècnic, divideixo la feina en tasques i deixo que l'agent faci la major part de la implementació, mentre jo la reviso i mantinc tests en el que és important. Amb els agents escrivint cada vegada més codi, crec que la feina es mou cap a entendre el problema i respondre del resultat, i aquesta és la part que més m'agrada.",
+      "En el dia a dia això vol dir Django i PostgreSQL al backend i Angular al frontend. També he mentoritzat dos desenvolupadors júnior amb revisions de codi i pairing.",
+      "El Màster en Desenvolupament i Arquitectura de Software de La Salle (URL) va canviar la meva manera de veure els problemes i les seves solucions. Ara sospeso els pros i contres de cada opció abans de triar-ne una, en lloc de quedar-me amb la primera que funciona. Al projecte final vaig portar un pipeline d'events sobre Kubernetes de 80 a 5.000 events per segon."
     ]
   },
   "experience": {
