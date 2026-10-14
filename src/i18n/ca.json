@@ -1,8 +1,8 @@
 {
   "lang": "ca",
   "meta": {
-    "title": "Aleix Casas — Enginyer de software full stack",
-    "description": "Enginyer de software full stack a Barcelona. Construeixo i opero sistemes que han d'aguantar: Python/Django sobre PostgreSQL, front ends en Angular, IA generativa en producció i Kubernetes sobre GCP."
+    "title": "Aleix Casas | Enginyer de software full stack",
+    "description": "Enginyer de software full stack a Barcelona. Python/Django i PostgreSQL, Angular, funcionalitats amb LLM en producció i Kubernetes a GCP."
   },
   "nav": {
     "about": "Sobre mi",
@@ -16,23 +16,23 @@
     "theme": "Canviar a mode fosc",
     "language": "Idioma",
     "skip": "Anar al contingut",
-    "home": "Aleix Casas — inici",
+    "home": "Aleix Casas, inici",
     "top": "Tornar a dalt",
     "cvFile": "/CV_Aleix_Casas_CA.pdf"
   },
   "hero": {
     "location": "Barcelona, Catalunya",
     "role": "Enginyer de software full stack",
-    "intro": "Construeixo i opero sistemes que han d'aguantar. Tres anys a l'equip de producte d'una plataforma SaaS d'analítica: APIs REST en Django sobre PostgreSQL amb desenes de milions de registres, una plataforma de widgets incrustables i una funcionalitat d'IA amb el cost sota control, totes dues en producció. Màster en Desenvolupament i Arquitectura de Software, La Salle (URL), 2026, on vaig portar un pipeline d'events sobre Kubernetes de 80 a 5.000 events per segon.",
+    "intro": "Enginyer full stack amb tres anys a l'equip de producte d'una plataforma SaaS d'analítica. Faig APIs REST en Django sobre PostgreSQL amb desenes de milions de registres, i he posat en producció una plataforma de widgets incrustables i una funcionalitat d'IA amb el cost controlat. Màster en Desenvolupament i Arquitectura de Software, La Salle (URL), 2026, on vaig portar un pipeline d'events sobre Kubernetes de 80 a 5.000 events per segon.",
     "cta": "Veure la meva feina"
   },
   "about": {
     "kicker": "Una mica de context",
     "title": "Sobre mi",
     "paragraphs": [
-      "Treballo en un equip de tres, i això vol dir que sóc responsable del que entrego: les decisions de disseny, l'entrega i les conseqüències. Vaig aprendre aviat que la part interessant d'una funcionalitat poques vegades és el codi, sinó el model de dades que hi ha a sota i què passa quan aquest volum creix.",
-      "La major part del meu temps va al backend i a les dades: APIs REST en Django, PostgreSQL, plans de consulta, índexs i treure del camí crític tot el que pesa. L'altra part és el front end —Angular, i la migració de tot un codi a reactivitat basada en signals—. Darrerament l'he dedicat a les parts que només apareixen sota càrrega —pooling de connexions, backpressure, autoescalat que faci el que et penses que fa— i a aconseguir que un model de llenguatge faci alguna cosa realment útil dins d'un producte.",
-      "Acabo de finalitzar el Màster en Desenvolupament i Arquitectura de Software a La Salle (URL). M'interessen els sistemes que han d'aguantar: disseny de dades, rendiment i decisions que continuïn tenint sentit d'aquí a dos anys."
+      "Treballo en un equip de tres, així que el que faig és meu de principi a fi: el disseny, el lliurament i el que passi després a producció. Treballant així he après a començar pel model de dades, perquè és on solen aparèixer els problemes quan les dades creixen.",
+      "La major part del meu temps va al backend i a les dades: APIs REST en Django, PostgreSQL, plans de consulta, índexs i treure de la petició el que és lent. La resta és frontend, sobretot Angular. Vaig migrar la nostra aplicació a Angular 20 i a signals. Darrerament també he treballat en coses que només fallen sota càrrega, com el pooling de connexions, el backpressure o l'autoescalat, i en aconseguir que un LLM sigui útil dins d'un producte real.",
+      "Fa poc que he acabat el Màster en Desenvolupament i Arquitectura de Software a La Salle (URL). El que més m'agrada és el disseny de dades, el rendiment i prendre decisions que continuïn tenint sentit un parell d'anys després."
     ]
   },
   "experience": {
@@ -43,7 +43,7 @@
         "role": "Enginyer de software full stack",
         "company": "IdenCity",
         "location": "Barcelona",
-        "period": "Juny 2023 — Actualitat",
+        "period": "Juny 2023 - Actualitat",
         "summary": "IDDIGO, una plataforma SaaS d'analítica urbana amb més de 1.000 indicadors de rendiment de ciutats i territoris. Treballo en un equip de producte de tres persones, cosa que vol dir fer-me càrrec del que entrego de principi a fi.",
         "points": [
           "Vaig dissenyar la plataforma de widgets incrustables: qualsevol funcionalitat de l'app Angular es pot configurar i incrustar als webs dels clients, amb un únic punt d'entrada, guards de rutes, autenticació JWT pròpia i una Content Security Policy per client validada a Nginx. En producció.",
@@ -67,10 +67,10 @@
         "context": "Treball final de màster · La Salle URL",
         "image": "/img/projects/vista-flota-dashboard.jpg",
         "imageAlt": "Panell d'operador de Vista Flota amb 2.500 camions sobre un mapa en viu i els KPIs de la flota",
-        "summary": "Una plataforma IoT de flotes en temps real: un dispositiu embarcat a cada camió publica telemetria per MQTT —posició, velocitat, combustible— que la plataforma ingereix, deduplica i converteix en estat de flota en viu, viatges i alertes sobre un panell d'operador, arxivant tot l'històric per reconstruir rutes.",
+        "summary": "Una plataforma IoT de flotes en temps real. Un dispositiu a cada camió envia per MQTT la posició, la velocitat i el combustible, i la plataforma ho rep, en treu els duplicats i ho converteix en l'estat de la flota en viu, viatges i alertes en un panell d'operador. Tot l'històric s'arxiva per poder reconstruir les rutes.",
         "highlights": [
-          "El requisit era 1.000 events/s sostinguts amb zero pèrdua de missatges. L'arquitectura de partida moria per OOM als 80.",
-          "Vaig treure els colls d'ampolla un a un —mesurar, diagnosticar, corregir, revalidar— amb Prometheus i Grafana: la deduplicació va sortir de PostgreSQL cap a Redis, PgBouncer multiplexant 200 connexions de client sobre 20 de reals, backpressure per watermarks, MQTT amb QoS 1, i KEDA substituït per HPA quan el profiling va demostrar que els pods eren CPU-bound.",
+          "El requisit era aguantar 1.000 events/s sense perdre missatges. La primera versió es quedava sense memòria cap als 80.",
+          "Vaig treure els colls d'ampolla un a un (mesurar, trobar la causa, corregir i tornar a provar) amb Prometheus i Grafana: la deduplicació va passar de PostgreSQL a Redis, PgBouncer per repartir 20 connexions reals entre 200 clients, backpressure per watermarks, MQTT amb QoS 1, i HPA en lloc de KEDA quan el profiling va demostrar que els pods eren CPU-bound.",
           "Resultat final: 5.000 events/s en pic, 3.200 sostinguts, 0,00 % de pèrdua."
         ],
         "stack": [
@@ -107,11 +107,11 @@
       {
         "name": "Plataforma de widgets incrustables",
         "tagline": "Qualsevol funcionalitat del producte, dins del web d'un altre",
-        "year": "2025–2026",
+        "year": "2025-2026",
         "context": "IDDIGO · IdenCity",
         "image": null,
         "imageAlt": null,
-        "summary": "Els clients volien parts d'IDDIGO dins dels seus propis webs. En lloc d'un incrustat puntual, ho vaig tractar com un problema d'arquitectura: com permetre que qualsevol funcionalitat de l'aplicació Angular es comparteixi com a widget, es configuri per a cada client i quedi tancada a la resta del producte.",
+        "summary": "Els clients volien parts d'IDDIGO dins dels seus propis webs. En lloc d'incrustar una sola pàgina, ho vaig muntar perquè qualsevol funcionalitat de l'app Angular es pugui compartir com a widget, configurada per a cada client i separada de la resta del producte.",
         "highlights": [
           "Un únic punt d'entrada carrega la configuració de cada widget a partir del seu identificador, i els guards de rutes mantenen el visitant dins de la funcionalitat que aquell widget permet.",
           "Els visitants del widget no són usuaris de la plataforma, així que tenen la seva pròpia autenticació JWT amb renovació proactiva del token, que conviu amb l'autenticació existent.",
@@ -125,7 +125,7 @@
           "JWT",
           "Nginx"
         ],
-        "note": "Producte propietari: sense repositori públic."
+        "note": "Producte propietari, sense repositori públic."
       },
       {
         "name": "Diagnòstic amb IA sobre Gemini",
@@ -150,7 +150,7 @@
           "Redis",
           "Angular"
         ],
-        "note": "Producte propietari: sense repositori públic."
+        "note": "Producte propietari, sense repositori públic."
       }
     ]
   },

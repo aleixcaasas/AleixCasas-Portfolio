@@ -1,8 +1,8 @@
 {
   "lang": "en",
   "meta": {
-    "title": "Aleix Casas — Full Stack Software Engineer",
-    "description": "Full Stack Software Engineer in Barcelona. I build and operate systems that have to hold up: Python/Django over PostgreSQL, Angular front ends, LLM features in production, and Kubernetes on GCP."
+    "title": "Aleix Casas | Full Stack Software Engineer",
+    "description": "Full Stack Software Engineer in Barcelona. Python/Django and PostgreSQL, Angular, LLM features in production, and Kubernetes on GCP."
   },
   "nav": {
     "about": "About",
@@ -16,23 +16,23 @@
     "theme": "Toggle dark mode",
     "language": "Language",
     "skip": "Skip to content",
-    "home": "Aleix Casas — home",
+    "home": "Aleix Casas, home",
     "top": "Back to top",
     "cvFile": "/CV_Aleix_Casas.pdf"
   },
   "hero": {
     "location": "Barcelona, Spain",
     "role": "Full Stack Software Engineer",
-    "intro": "I build and operate systems that have to hold up. Three years in the product team of a SaaS analytics platform: Django REST APIs over PostgreSQL holding tens of millions of records, an embeddable widget platform and an AI feature with its cost under control, both in production. MSc in Software Development & Architecture, La Salle (URL), 2026, where I took a Kubernetes event pipeline from 80 to 5,000 events per second.",
+    "intro": "Full stack engineer with three years on the product team of a SaaS analytics platform. I build Django REST APIs over PostgreSQL with tens of millions of records, and I've shipped an embeddable widget platform and an AI feature with controlled costs, both in production. MSc in Software Development & Architecture, La Salle (URL), 2026, where I took a Kubernetes event pipeline from 80 to 5,000 events per second.",
     "cta": "See my work"
   },
   "about": {
     "kicker": "A bit of context",
     "title": "About me",
     "paragraphs": [
-      "I work in a team of three, which means I own what I ship: the design decisions, the delivery and the consequences. It taught me early that the interesting part of a feature is rarely the code — it's the schema underneath it and what happens when the data grows.",
-      "Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes and moving expensive work off the critical path. The other part is the front end — Angular, and the migration of a whole codebase to signal-based reactivity. Recently I've spent it on the parts that only show up under load — connection pooling, backpressure, autoscaling that does what you think it does — and on getting an LLM to do something genuinely useful inside a product.",
-      "I've just finished an MSc in Software Development & Architecture at La Salle (URL). I'm interested in systems that have to hold up: data design, performance, and decisions that still make sense two years later."
+      "I work in a team of three, so what I build is mine from start to finish: the design, the delivery and whatever happens once it's in production. Working like that, I've learned to start with the data model, because that's usually where problems show up when the data grows.",
+      "Most of my time goes into backend and data: Django REST APIs, PostgreSQL, query plans, indexes, and moving slow work out of the request. The rest is frontend, mostly Angular. I migrated our app to Angular 20 and signals. Lately I've also worked on things that only break under load, like connection pooling, backpressure and autoscaling, and on making an LLM useful inside a real product.",
+      "I've just finished an MSc in Software Development & Architecture at La Salle (URL). What I enjoy most is data design, performance, and making decisions that still make sense a couple of years later."
     ]
   },
   "experience": {
@@ -43,7 +43,7 @@
         "role": "Full Stack Software Engineer",
         "company": "IdenCity",
         "location": "Barcelona",
-        "period": "June 2023 — Present",
+        "period": "June 2023 - Present",
         "summary": "IDDIGO, a SaaS urban analytics platform tracking over 1,000 performance indicators for cities and territories. I work in a product team of three engineers, which means owning what I ship end to end.",
         "points": [
           "Designed the embeddable widget platform: any feature of the Angular app can be configured and embedded in client websites, with a single entry point, route guards, its own JWT authentication and a per-client Content Security Policy enforced at the Nginx layer. Live in production.",
@@ -67,10 +67,10 @@
         "context": "Master's thesis · La Salle URL",
         "image": "/img/projects/vista-flota-dashboard.jpg",
         "imageAlt": "Vista Flota operator dashboard showing 2,500 trucks on a live map with fleet KPIs",
-        "summary": "A real-time IoT fleet platform: a device on each truck publishes telemetry over MQTT — position, speed, fuel — which the platform ingests, deduplicates and turns into live fleet state, trips and alerts on an operator dashboard, archiving the full history for route reconstruction.",
+        "summary": "A real-time IoT fleet platform. A device on each truck sends its position, speed and fuel over MQTT, and the platform ingests it, removes duplicates and turns it into live fleet status, trips and alerts on an operator dashboard. The full history is archived so routes can be replayed.",
         "highlights": [
-          "The requirement was 1,000 events/s sustained with zero message loss. The baseline architecture died of OOM at 80.",
-          "Removed bottlenecks one at a time — measure, diagnose, fix, re-validate — with Prometheus and Grafana: deduplication moved out of PostgreSQL into Redis, PgBouncer multiplexing 200 client connections over 20 real ones, watermark-based backpressure, MQTT QoS 1, and KEDA replaced by HPA once profiling proved the pods were CPU-bound.",
+          "The requirement was 1,000 events/s sustained with no message loss. The first version ran out of memory at around 80.",
+          "I removed the bottlenecks one at a time (measure, find the cause, fix, test again) using Prometheus and Grafana: deduplication moved from PostgreSQL to Redis, PgBouncer to share 20 real database connections among 200 clients, watermark-based backpressure, MQTT QoS 1, and HPA instead of KEDA once profiling showed the pods were CPU-bound.",
           "Final result: 5,000 events/s at peak, 3,200 sustained, 0.00% loss."
         ],
         "stack": [
@@ -107,11 +107,11 @@
       {
         "name": "Embeddable widget platform",
         "tagline": "Any feature of the product, inside someone else's website",
-        "year": "2025–2026",
+        "year": "2025-2026",
         "context": "IDDIGO · IdenCity",
         "image": null,
         "imageAlt": null,
-        "summary": "Clients wanted parts of IDDIGO inside their own websites. Rather than a one-off embed, I treated it as an architecture problem: how to let any feature of the Angular application be shared as a widget, configured for each client, and kept closed off from the rest of the product.",
+        "summary": "Clients wanted parts of IDDIGO inside their own websites. Instead of embedding a single page, I built it so that any feature of the Angular app can be shared as a widget, configured for each client and kept separate from the rest of the product.",
         "highlights": [
           "A single entry point loads each widget's configuration from its ID, and route guards keep visitors inside the functionality that widget allows.",
           "Widget visitors aren't platform users, so they get their own JWT authentication with proactive token refresh, running alongside the platform's existing authentication.",
@@ -125,7 +125,7 @@
           "JWT",
           "Nginx"
         ],
-        "note": "Proprietary product — no public repository."
+        "note": "Proprietary product, no public repository."
       },
       {
         "name": "AI diagnosis with Gemini",
@@ -150,7 +150,7 @@
           "Redis",
           "Angular"
         ],
-        "note": "Proprietary product — no public repository."
+        "note": "Proprietary product, no public repository."
       }
     ]
   },
